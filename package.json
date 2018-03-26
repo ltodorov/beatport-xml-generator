@@ -12,10 +12,10 @@
   "author": "Lyubomir Todorov",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^22.2.0",
-    "@types/node": "^8.9.5",
-    "jest": "^22.4.2",
-    "ts-jest": "^22.4.1",
+    "@types/jest": "^22.2.2",
+    "@types/node": "^8.10.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.2",
     "typescript": "^2.7.2"
   },
   "jest": {
