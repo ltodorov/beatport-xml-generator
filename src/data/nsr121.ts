@@ -4,11 +4,11 @@ export const release = new Release({
   id: 121,
   originalReleaseDate: "2018-04-15",
   UPC_EAN: 192641057700,
-  title: "Deep Dive",
+  title: "Deep Down",
   tracks: [
     new Track({
       ISRC: "USA2P1820002",
-      title: "Deep Dive",
+      title: "Deep Down",
       mixVersion: "Original Mix",
       artists: ["DJ Tarkan"],
       remixers: [],
