@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>0</UPC_EAN>
+  <catalogNumber>NSR122</catalogNumber>
+  <coverArtFilename>NSR122.png</coverArtFilename>
+  <releaseTitle>Loved By You ft. Ria</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>GBLC21812201</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Loved By You ft. Ria</trackTitle>
+      <trackMixVersion>DJ Tarkan Remix</trackMixVersion>
+      <originalReleaseDate>2018-04-04</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>Melih Aydogan</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>DJ Tarkan</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>NSR122_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Deep House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>author</type>
+        </songwriter>
+      </songwriters>
+    </track>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>2</trackNumber>
+      <ISRC>GBLC21812202</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Loved By You ft. Ria</trackTitle>
+      <trackMixVersion>DJ Tarkan Remix - Radio Edit</trackMixVersion>
+      <originalReleaseDate>2018-04-04</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>Melih Aydogan</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>DJ Tarkan</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>NSR122_2.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Deep House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>author</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>
