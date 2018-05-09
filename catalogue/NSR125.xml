@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <catalogNumber>NSR125</catalogNumber>
+  <coverArtFilename>NSR125.png</coverArtFilename>
+  <releaseTitle>Reflection</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>GBLC21812501</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Reflection feat. Gautier</trackTitle>
+      <trackMixVersion>Original Mix</trackMixVersion>
+      <originalReleaseDate>2018-05-20</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackAudioFile>
+        <audioFilename>NSR125_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Deep House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>author</type>
+        </songwriter>
+      </songwriters>
+    </track>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>2</trackNumber>
+      <ISRC>GBLC21812502</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Reflection feat. Gautier</trackTitle>
+      <trackMixVersion>Extended Mix</trackMixVersion>
+      <originalReleaseDate>2018-05-20</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackAudioFile>
+        <audioFilename>NSR125_2.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Deep House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>author</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>
