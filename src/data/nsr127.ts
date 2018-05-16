@@ -1,13 +1,13 @@
 import { Release, Track, GENRES } from "../models";
 
 export const release = new Release({
-  id: 125,
+  id: 127,
   originalReleaseDate: "2018-07-15",
-  UPC_EAN: 0,
+  UPC_EAN: 192641105302,
   title: "Without You",
   tracks: [
     new Track({
-      ISRC: "",
+      ISRC: "USA2P1835332",
       title: "Without You",
       mixVersion: "Original Mix",
       artists: ["Mr. Nu"],
@@ -16,7 +16,7 @@ export const release = new Release({
       genre: GENRES.DeepHouse
     }),
     new Track({
-      ISRC: "",
+      ISRC: "USA2P1835333",
       title: "Without You",
       mixVersion: "Almanah & Monoteq Remix",
       artists: ["Mr. Nu"],
@@ -25,7 +25,7 @@ export const release = new Release({
       genre: GENRES.DeepHouse
     }),
     new Track({
-      ISRC: "",
+      ISRC: "USA2P1835334",
       title: "Without You",
       mixVersion: "Melih Aydogan Remix",
       artists: ["Mr. Nu"],
