@@ -1,7 +1,7 @@
 {
-  "name": "beatport",
+  "name": "beatport-xml-submission",
   "version": "1.0.0",
-  "description": "",
+  "description": "A generator for XML files for content submissions to Beatport",
   "main": "dist/index.js",
   "scripts": {
     "prestart": "tsc",
@@ -13,10 +13,10 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^22.2.3",
-    "@types/node": "^8.10.13",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.4.5",
-    "typescript": "^2.8.3"
+    "@types/node": "^8.10.40",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^2.9.2"
   },
   "jest": {
     "transform": {
