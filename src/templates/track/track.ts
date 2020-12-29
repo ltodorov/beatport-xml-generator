@@ -1,3 +1,4 @@
+import { escapeHTML } from "../../helpers";
 import { Track, Release } from "../../models";
 import { templateArtist } from "../artist";
 import { templateRemixers } from "../remixers";
@@ -6,7 +7,7 @@ import { templateSongwriter } from "../songwriter";
 export function templateTrack(acc: string, data: Release, track: Track, index: number) {
   const number = index + 1;
   const title = track.title || data.title;
-  const mixVersion = track.mixVersion || "Original Mix";
+  const mixVersion = escapeHTML(track.mixVersion) || "Original Mix";
   const songwriters = track.songwriters.length > 0 ? track.songwriters : track.artists;
 
   return `${acc}

@@ -1,4 +1,6 @@
+import { escapeHTML } from "../../helpers";
+
 export function templateArtist(acc: string, artist: string) {
   return `${acc}
-        <artistName>${artist}</artistName>`;
+        <artistName>${escapeHTML(artist)}</artistName>`;
 }

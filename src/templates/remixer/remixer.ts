@@ -1,4 +1,6 @@
+import { escapeHTML } from "../../helpers";
+
 export function templateRemixer(acc: string, remixer: string) {
   return `${acc}
-        <remixerName>${remixer}</remixerName>`;
+        <remixerName>${escapeHTML(remixer)}</remixerName>`;
 }
