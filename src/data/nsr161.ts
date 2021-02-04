@@ -12,7 +12,7 @@ export const release = new Release({
       mixVersion: "Ian Tosel & Arthur M Dub Remix",
       artists: ["DJ Tarkan"],
       remixers: ["Ian Tosel", "Arthur M"],
-      songwriters: ["Ian Tosel", "Arthur M"],
+      songwriters: ["Yannis Topouzelidis", "Artour Male"],
       genre: GENRES.ProgressiveHouse
     })
   ]
