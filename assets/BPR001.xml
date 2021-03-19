@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--[ BasewareRemote v1.1.0 ]-->
+<release>
+  <album_action>delete</album_action>
+  <aggregatorName>Beatport</aggregatorName>
+  <labelName>Beatport Records</labelName>
+  <UPC_EAN>1234561234567</UPC_EAN>
+  <catalogNumber>BPR001</catalogNumber>
+  <coverArtFilename>BPR001.jpg</coverArtFilename>
+  <releaseTitle>This Is My Release EP</releaseTitle>
+  <releaseDescription>Don't miss this amazing release!</releaseDescription>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>AAAAA1100000</ISRC>
+      <trackPublisher>Beatport LLC</trackPublisher>
+      <trackTitle>This Is My Track</trackTitle>
+      <trackMixVersion>The Remix</trackMixVersion>
+      <originalReleaseDate>2011-11-11</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>2</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Joe</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>DJ Bob</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>BPR001_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>House</trackGenre>
+      <trackCopyright>Copyright</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Joe</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Bob</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>

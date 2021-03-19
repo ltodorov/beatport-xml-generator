@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  {{#if albumAction}}
+  <album_action>{{albumAction}}</album_action>
+  {{/if}}
+  <aggregatorName>{{aggregatorName}}</aggregatorName>
+  <labelName>{{labelName}}</labelName>
+  <UPC_EAN>{{UPC_EAN}}</UPC_EAN>
+  <catalogNumber>{{catalogNumber}}</catalogNumber>
+  <coverArtFilename>{{catalogNumber}}.jpg</coverArtFilename>
+  <releaseTitle>{{title}}</releaseTitle>
+  {{#if description}}
+  <releaseDescription>{{description}}</releaseDescription>
+  {{/if}}
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    {{#each tracks as | track |}}
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>{{trackNumber @index}}</trackNumber>
+      <ISRC>{{track.ISRC}}</ISRC>
+      <trackPublisher>{{safeValue ../labelName track.trackPublisher}}</trackPublisher>
+      <trackTitle>{{safeValue ../title track.title}}</trackTitle>
+      <trackMixVersion>{{safeValue "Original Mix" track.mixVersion}}</trackMixVersion>
+      <originalReleaseDate>{{safeValue ../originalReleaseDate track.originalReleaseDate}}</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>{{safeValue 0 track.exclusivePeriod}}</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        {{#each track.artists as | artist |}}
+        <artistName>{{artist}}</artistName>
+        {{/each}}
+      </trackArtists>
+      {{#if track.trackRemixers}}
+      <trackRemixers>
+        {{#each track.trackRemixers as | remixer |}}
+        <remixerName>{{remixer}}</remixerName>
+        {{/each}}
+      </trackRemixers>
+      {{/if}}
+      <trackAudioFile>
+        <audioFilename>{{../catalogNumber}}_{{trackNumber @index}}.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>{{track.genre}}</trackGenre>
+      <trackCopyright>{{safeValue ../labelName track.copyright}}</trackCopyright>
+      <songwriters>
+        {{#each track.songwriters as | songwriter |}}
+        <songwriter>
+          <name>{{songwriter.name}}</name>
+          <type>{{songwriter.type}}</type>
+        </songwriter>
+        {{/each}}
+      </songwriters>
+    </track>
+    {{/each}}
+  </tracks>
+</release>

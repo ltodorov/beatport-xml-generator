@@ -1,2 +1,2 @@
-# beatport-xml-submission
-A generator for XML files for content submissions to Beatport
+# beatport-xml-generator
+XML generator for content submissions to Beatport.com
