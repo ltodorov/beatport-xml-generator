@@ -20,8 +20,8 @@
       <trackNumber>{{trackNumber @index}}</trackNumber>
       <ISRC>{{track.ISRC}}</ISRC>
       <trackPublisher>{{safeValue ../labelName track.trackPublisher}}</trackPublisher>
-      <trackTitle>{{safeValue ../title track.title}}</trackTitle>
-      <trackMixVersion>{{safeValue "Original Mix" track.mixVersion}}</trackMixVersion>
+      <trackTitle>{{track.title}}</trackTitle>
+      <trackMixVersion>{{track.mixVersion}}</trackMixVersion>
       <originalReleaseDate>{{safeValue ../originalReleaseDate track.originalReleaseDate}}</originalReleaseDate>
       <beatportExclusive>
         <exclusivePeriod>{{safeValue 0 track.exclusivePeriod}}</exclusivePeriod>
