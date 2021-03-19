@@ -12,7 +12,7 @@
   {{#if description}}
   <releaseDescription>{{description}}</releaseDescription>
   {{/if}}
-  <releaseSalesType>release</releaseSalesType>
+  <releaseSalesType>{{safeValue "release" salesType}}</releaseSalesType>
   <tracks>
     {{#each tracks as | track |}}
     <track>

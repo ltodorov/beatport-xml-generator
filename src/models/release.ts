@@ -24,6 +24,10 @@ interface Release {
 
     // https://beatportops.zendesk.com/hc/en-us/articles/224426768-Can-I-update-or-delete-my-release-via-XML-delivery-
     albumAction?: AlbumAction;
+
+    description?: string;
+
+    salesType?: "release" | "album";
 }
 
 interface Track {
