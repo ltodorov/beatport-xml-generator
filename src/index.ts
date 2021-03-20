@@ -1,5 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
+import { red, green } from "chalk";
 import { compile, registerHelper } from "handlebars";
 import { parseXml } from "libxmljs2";
 import { SalesType } from "./models/release";
@@ -22,8 +23,8 @@ registerHelper("optionalValue", (defaultValue: string, value?: string) => value 
 
 registerHelper("albumOnly", (salesType: SalesType | undefined) => salesType === "album" ? 1 : 0);
 
-function readTemplate(file: string): Promise<string> {
-    return new Promise((resolve, reject) => {
+function readTemplate(file: string) {
+    return new Promise<string>((resolve, reject) => {
         fs.readFile(file, encoding, (err, data) => {
             if (err) {
                 reject(err.message);
@@ -40,8 +41,8 @@ function readTemplate(file: string): Promise<string> {
     });
 }
 
-function readSchema(file: string): Promise<string> {
-    return new Promise((resolve, reject) => {
+function readSchema(file: string) {
+    return new Promise<string>((resolve, reject) => {
         fs.readFile(file, encoding, (err, data) => {
             if (err) {
                 reject(err.message);
@@ -56,7 +57,7 @@ function writeFile(file: string, data: string) {
     fs.writeFile(file, data, encoding, err => {
         err && throwError(err.message);
 
-        console.log("Release has been generated successfully!");
+        console.log(green("Release has been generated successfully!"));
     });
 }
 
@@ -64,11 +65,19 @@ function throwError(errMessage: string) {
     throw new Error(errMessage);
 }
 
-const readTemplatePromise = readTemplate(templateFile);
-const readSchemaPromise = readSchema(schemaFile);
+function logError(errMessage: string) {
+    console.error(red(errMessage));
+}
+
+const readTemplatePromise = readTemplate(templateFile).catch(logError);
+const readSchemaPromise = readSchema(schemaFile).catch(logError);
 
 Promise.all([readTemplatePromise, readSchemaPromise])
     .then(([xmlString, xsdString]) => {
+        if (!xmlString || !xsdString) {
+            return;
+        }
+
         const xmlDoc = parseXml(xmlString);
         const xsdDoc = parseXml(xsdString);
 
@@ -85,4 +94,4 @@ Promise.all([readTemplatePromise, readSchemaPromise])
             });
         }
     })
-    .catch(err => throwError(err));
+    .catch(logError);
