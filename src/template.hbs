@@ -12,19 +12,19 @@
   {{#if description}}
   <releaseDescription>{{description}}</releaseDescription>
   {{/if}}
-  <releaseSalesType>{{safeValue "release" salesType}}</releaseSalesType>
+  <releaseSalesType>{{optionalValue "release" salesType}}</releaseSalesType>
   <tracks>
     {{#each tracks as | track |}}
     <track>
-      <albumOnly>0</albumOnly>
+      <albumOnly>{{albumOnly ../salesType}}</albumOnly>
       <trackNumber>{{trackNumber @index}}</trackNumber>
       <ISRC>{{track.ISRC}}</ISRC>
-      <trackPublisher>{{safeValue ../labelName track.trackPublisher}}</trackPublisher>
+      <trackPublisher>{{optionalValue ../labelName track.trackPublisher}}</trackPublisher>
       <trackTitle>{{track.title}}</trackTitle>
       <trackMixVersion>{{track.mixVersion}}</trackMixVersion>
-      <originalReleaseDate>{{safeValue ../originalReleaseDate track.originalReleaseDate}}</originalReleaseDate>
+      <originalReleaseDate>{{optionalValue ../originalReleaseDate track.originalReleaseDate}}</originalReleaseDate>
       <beatportExclusive>
-        <exclusivePeriod>{{safeValue 0 track.exclusivePeriod}}</exclusivePeriod>
+        <exclusivePeriod>{{optionalValue 0 track.exclusivePeriod}}</exclusivePeriod>
       </beatportExclusive>
       <trackArtists>
         {{#each track.artists as | artist |}}
@@ -42,10 +42,15 @@
         <audioFilename>{{../catalogNumber}}_{{trackNumber @index}}.wav</audioFilename>
       </trackAudioFile>
       <countriesAvailable>
+        {{#unless track.countries}}
         <country>WW</country>
+        {{/unless}}
+        {{#each track.countries as | country |}}
+        <country>{{country}}</country>
+        {{/each}}
       </countriesAvailable>
       <trackGenre>{{track.genre}}</trackGenre>
-      <trackCopyright>{{safeValue ../labelName track.copyright}}</trackCopyright>
+      <trackCopyright>{{optionalValue ../labelName track.copyright}}</trackCopyright>
       <songwriters>
         {{#each track.songwriters as | songwriter |}}
         <songwriter>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<help>
+  <item name="Release Type" type="release">
+    <description lang="es_ES">Single/EP' se refiere a un disco sencillo o a un EP. 
+'Album' se refiere a un LP. 
+'DJ Mix' se refiere a una mezcla continua.</description>
+    <description lang="en_US">'Single / EP' refers to a single or EP.
+ 'Album' refers to an LP.
+'DJ Mix' refers to a continuous DJ mix.</description>
+    <description lang="it_IT">'Single EP' si riferisce a un singolo o ad un EP. 
+'Album' si riferisce ad un Long Playing, LP. 
+'DJ Mix' si riferisce ad un DJ Set continuo.</description>
+    <description lang="fr_FR">Single/EP' se rapporte à un single ou à un EP. 
+'Album' se rapporte à un LP. 
+'DJ Mix' se rapporte à un mix continu</description>
+  </item>
+  <item name="Company Name" type="release">
+    <description lang="es_ES">El proveedor que tiene un contrato con Beatport (Ej: Ingrooves)</description>
+    <description lang="en_US">The content supplier that has a contract with Beatport (Ex: Ingrooves)</description>
+    <description lang="it_IT">Il distributore che ha il contratto con Beatport (es: Ingrooves)</description>
+    <description lang="fr_FR">Le fournisseur qui a un contract avec Beatport (exe. Ingrooves)</description>
+  </item>
+  <item name="Label Name" type="release">
+    <description lang="es_ES">El nombre del sello.  Puede ser igual que el nombre de la empresa o no. Depende si trabajáis con una distribuidora.</description>
+    <description lang="en_US">The label's name. It may or may not be the same as the company name depending on whether or not you work with a distributor.</description>
+    <description lang="it_IT">Il nome dell'etichetta. Puó essere lo stesso nome dell'azienda, dipende se lavori come distributore.</description>
+    <description lang="fr_FR">Le nom du label.  Il puet être le même que le nom de l'entreprise.  Ca dépend si vous travaillez avec un distributeur ou pas.</description>
+  </item>
+  <item name="Release Title" type="release">
+    <description lang="es_ES">El nombre del disco como aparece en Beatport</description>
+    <description lang="en_US">The name of the release, as displayed on Beatport</description>
+    <description lang="it_IT">Il titolo dell'uscita, come appare in Beatport</description>
+    <description lang="fr_FR">Le nom de la sortie, comme il apparaît sur Beatport.</description>
+  </item>
+  <item name="Catalog Number" type="release">
+    <description lang="es_ES">El número de catálogo es el número de identificación que un sello asigna a un disco.  Normalmente los números de catálogo incluyen ambas cifras y letras - a menudo se ve una  parte del nombre del sello junto con algunos números que significan la cantidad de disco que ha sacado el sello. El número de catálogo debe ser único para cada disco.</description>
+    <description lang="en_US">A catalog number is the identification number a label assigns to a release. Catalog numbers typically include both numbers and letters - often some portion of the label name combined with numbers that signify the number of releases for the label, and should be unique for each release in the catalog. (Ex: BP001, BP002, etc)</description>
+    <description lang="it_IT">Il numero di catalogo é un numero di identificazione che l'etichetta assegna ad un'uscita. I numeri di catalogo contengono normalmente sia lettere sia numeri - spesso alcune lettere del nome dell'etichetta combinate con numeri, che sono di solito il numero dell'uscita . Il numero di catalogo deve essere unico per ogni uscita (es: BP001, BP002, ecc)</description>
+    <description lang="fr_FR">Le numéro de catalogue est le numéro d'identification qu'attirbue un label à une sortie. Ces numéros de catalogue normalement incluent des numéros ainsi que des lettres - souvent une partie du nom du lable suivi de quelques numéros qui signifient la quantité de sorties du label.  Le numéro de catalogue doit être unique pour chaque sortie.</description>
+  </item>
+  <item name="Global Release ID (GRid)" type="release" link="http://www.ifpi.org">
+    <description lang="es_ES">El Global Release Identifier (GRid) es un sistema para identificar discos digitales (y otros tipos de datos digitales) distribuidos de forma electrónica.  Un 'GRid'  consiste de 18 caracteres alfanuméricos.  http://www.ifpi.org es el organismo responsable de la inscripción y es gratuito ser miembro.</description>
+    <description lang="en_US">The Global Release Identifier (GRid) is a system to identify releases of digital sound recordings (and other digital data) for electronic distribution. A GRid consists of 18 alphanumerical characters. http://www.ifpi.org is the registration authority and membership is free.</description>
+    <description lang="it_IT">Il Global Release Identifier (GRid) é un sistema che identifica le uscite registrate digitalmente (e altri tipi di prodotti digitali) per la distribuzione digitale. Un numero Grid é composto di 18 caratteri alfanumerici. http://www.ifpi.org é l'ente responsabile della registarzione e l'iscrizione é gratuita.</description>
+    <description lang="fr_FR">Le Global Release Identifier (Grid) est un système pour identifier sorties digitales (et d'autres types de données digitales) distribuée de électroniquement.  Un 'Grid' consiste de 18 caractères alphanumériques.  http://www.ifpi.org est le organisme responsable de et l'inscription est gratuite..</description>
+  </item>
+  <item name="UPC / EAN Number" type="release" link="http://en.wikipedia.org/wiki/Universal_Product_Code">
+    <description lang="es_ES">Universal Product Code o European Article Number son los códigos de indentificación sobre discos físicos, normalmente como un código de barras.</description>
+    <description lang="en_US">Universal Product Code or European Article Number that is found on physical releases, often as a bar code.</description>
+    <description lang="it_IT">Universal Product Code e l' European Article Number sono i codici a barre che si trovano sulle uscite fisiche.</description>
+    <description lang="fr_FR">Universal Product Code ou le European Article Number sont les codes qui se trouvent sur les sorties phyisiques, souvent comme un code à barres.</description>
+  </item>
+  <item name="Release Description" type="release">
+    <description lang="es_ES">La descripción del disco se ve en la página de Beatport y puede incluir feedback promocional, los artistas que han expresado su apoyo, y biografía de los productores/artistas. (65,000 caracteres como máximo.)</description>
+    <description lang="en_US">The release description is displayed on Beatport's website and might include; promotional feedback, artists currently supporting the release, and biographies of the producers/artists.  (65,000 Char limit)</description>
+    <description lang="it_IT">La descrizione dell'uscita appare sul sito di Beatport e dovrebbe includere:  i feedback promozionali, gli artisti che appoggiamo l'uscita e la biografia del produttore/artista. (65000 caratteri  al massimo)</description>
+    <description lang="fr_FR">La description de la sortie s'affiche sur le site de Beatport et peut comprendre feedback promotional, les artiste qui actuellement encouragent la sortie, et les biographies des producteurs/artistes</description>
+  </item>
+  <item name="Cover Art" type="release">
+    <description lang="es_ES">Las carátulas se ven en la página de Beatport y vienen incorporadas en los archivos mp3. (Dimensiones mínimas: 500px por 500px cuadrados)</description>
+    <description lang="en_US">Cover art is displayed on Beatport's website and is embedded into the mp3 file. (Minimum dimensions: 500px by 500px square)</description>
+    <description lang="it_IT">La copertina appare sul sito di Beatport e viene inclusa nei file MP3. (Dimensioni minime: quadrato di 500 pixel x 500 pixel )</description>
+    <description lang="fr_FR">Les pochettes s'affichent sur le site de Beatport et viennent incorporées dans les fichiers mp3. (Dimensions minimales 500px par 500px carrés)</description>
+  </item>
+  <item name="Beatport Exclusive" type="track">
+    <description lang="es_ES">La duración de semanas que un tema esté disponible exclusivamente en Beatport.  La fecha de comienzo de la exclusividad se establece por la fecha de salida. El período permitido de exclusividad depende del contrato que tengáis con Beatport.  Todos las canciones exclusivas tienen que llegarnos por lo menos una semana antes de la fecha de salida especificada.</description>
+    <description lang="en_US">The length, in weeks, a track is available exclusively at Beatport. The exclusive begin date is determined by the field track's release date. The allowed exclusive period depends on your contract with Beatport. All exclusive tracks must be submitted at least a week before the track's specified release date.</description>
+    <description lang="it_IT">La durata, in settimane,di una traccia in vendita esclusivamente su Beatport. La data d'inizio dell'esclusiva viene determinata dal campo della data d'uscita della traccia (vedi sopra). Il periodo di esclusiva consentito dipende dal tuo contratto con Beatport. Tutte le tracce esclusive devono essere consegnate almeno una settimana prima della data d'uscita specificata.</description>
+    <description lang="fr_FR">La durée de semaines qu'un titre est disponible exclusivement sur Beatport.  La date de début de l'exclusivité est déterminée par la date de sortie du titre.  La période d'exclusivité dépend du contrat que vous avez avec Beatport.  Tous les titres exclusifs doivent être soumis au moins une semain avant la date de sortie stipulée.</description>
+  </item>
+  <item name="Audio File" type="track">
+    <description lang="es_ES">Beatport sólo acepta nuevos contenidos en formato WAV o AIF. La producción debe de estar masterizada y normalizada, calidad CD 44.1KHz / 16-bit.</description>
+    <description lang="en_US">Beatport only accepts new content as WAV or AIF files. The production should be mastered and normalized, CD-Quality 44.1KHz / 16-bit.</description>
+    <description lang="it_IT">Beatport accetta i nuovi materiali solamente in formato WAV o AIF. La produzione deve essere masterizzata e normalizzata a CD-Quality 44.1KHz / 16-bit.</description>
+    <description lang="fr_FR">Beatport n'accepte de nouveaux contenus aux formats WAV ou AIF.  La production devrait être masterisée et normalisée, qualité CD 44.1KHz/16-bit.</description>
+  </item>
+  <item name="Track Title" type="track">
+    <description lang="es_ES">El título del tema como aparece en Beatport</description>
+    <description lang="en_US">The title of the track, as displayed on Beatport</description>
+    <description lang="it_IT">Il titolo della traccia, come appare su Beatport</description>
+    <description lang="fr_FR">Le titre du morceau comme il apparaît sur Beatport.</description>
+  </item>
+  <item name="Remix / Version" type="track">
+    <description lang="es_ES">La versión del tema como aparece en Beatport. La predefinida es 'Original Mix'</description>
+    <description lang="en_US">The version of the track, as displayed on Beatport. Default is 'Original Mix'</description>
+    <description lang="it_IT">La versione della traccia, come appare su Beatport. La predefinita é "Original Mix"</description>
+    <description lang="fr_FR">La version du morceau comme il apparaît sur Beatport. La prédéterminée est 'Original Mix'.</description>
+  </item>
+  <item name="Original Release Date" type="track">
+    <description lang="es_ES">La fecha original cuando el material se hizo (o se hará) disponible al público.  Si el material ya ha salido en otro lugar o en otro formato, se tiene que poner esa fecha.</description>
+    <description lang="en_US">The original date when the content was (or will be) made available to the public. If the content has been released previously, somewhere else, or on another format that date should be used.</description>
+    <description lang="it_IT">La data originale di quando il materiale é stato (o sará) reso disponibile al pubblico. Si deve usare la data originale se il materiale é stato pubblicato in precedenza o da qualche altra parte o in un altro formato.</description>
+    <description lang="fr_FR">La date originale quand le contenu est devenu (ou deviendra) disponible au publique.  Si le contenu est déjà sortie ailleurs ou à un autre format, il faudrait stipuler cette date-là.</description>
+  </item>
+  <item name="Genre" type="track">
+    <description lang="es_ES">Sugerir un género/sub-género para el tema. Beatport se reserva el derecho de determinar el género publicado al final.</description>
+    <description lang="en_US">Suggest a genre / subgenre for the track. Beatport reserves the right to determine the final published genre and / or subgenre.</description>
+    <description lang="it_IT">Suggerisci un genere o un sottogenere per la traccia. Beatport si riserva il diritto di determinare il genere o il sottogenere finale che verrá pubblicato.</description>
+    <description lang="fr_FR">Suggérer un genre/sub-genre pour le titre. Beatport se réserve le droit de déterminer le genre publié au final.</description>
+  </item>
+  <item name="Copyright Holder" type="track">
+    <description lang="es_ES">Información relacionada con los derechos de autor del tema, 255 caracteres como máximo</description>
+    <description lang="en_US">Any copyright information which is associated with a track, up to 255 characters in length.</description>
+    <description lang="it_IT">Qualsiasi informazione relativa ai diritti d'autore associata alla traccia, fino a 255 caratteri.</description>
+    <description lang="fr_FR">L'information liée aux droits d'auteur d'un titre, jusqu'à 255 caractères de longeur.</description>
+  </item>
+  <item name="Publisher" type="track" link="http://en.wikipedia.org/wiki/Performance_rights_organisation">
+    <description lang="es_ES">Un editor es una entidad que supervisa el cobro de los derechos de autor para compositores y productores.  Una vez que una producción haya generado ingresos a través de los varios medios de explotación (descarga digital, interpretación, etc) es la responsibilidad del editor de obtener y distribuir los pagos relacionados con la composición al artista pertinente. Sin embargo, en la mayoría de paises el acuerdo entre el PRO y el compositor suplanta la relación entre sello, editor y compositor.  Entonces, cuando una canción genera ingresos de la interpretación o de la licencia mecánica, el PRO es la primera organización que se encarga del cobro por el compositor. (ej. EMI Music Publishing) (255 caracteres como máximo)                                                 
+Notas adicionales: Se puede añadir 'Copyright Control' o 'Label Control' dependiendo de las circunstancias de cada territorio.</description>
+    <description lang="en_US">A publisher is an entity that oversees the royalty collection of a composition for songwriters and composers.  When a production has generated income through various mediums of exploitation (digital download, performance, etc.) it is the publishers responsibility to obtain and distribute the payments associated with the composition to the respective artist. However, In most countries the PRO/songwriter agreement supersedes the label/publisher/songwriter relationship. Therefore, when a song generates income by performance or mechanical royalty; The PRO is the first organization to collect for a songwriter.  (e.g., EMI Music Publishing) (Maximum 255 Characters)
+Additional Notes: You can add "Copyright Control' or 'Label Control' if that is the case for all territories.</description>
+    <description lang="it_IT">L'editore é quell'entitá che supervisiona i diritti d'autore di una composizione per conto di autori e compositori. Quando una produzione ha prodotto delle entrate attraverso vari media di utilizzo della riproduzione (download digitale, performance, ecc, ecc,…) é responsabilitá dell’editore ottenere e distribuire ai rispettivi artisti i pagamenti associati alla composizione. Tuttavia nella maggior parte delle nazioni il PRO/Compositore sostituisce la relazione etichetta/editore/autore. Perció, quando una traccia produce entrate con performance o diritti d’autore meccanici, il PRO é la prima organizzazione che riscuote per il compositore. (per esempio EMI Music Publishing) (Fino a 255 Caratteri)</description>
+    <description lang="fr_FR">Un éditeur est une entité qui supervise la collecte des droits d'auteur pour les compositeurs et producteurs. Une fois qu'une production a produit du revenu à travers les plusieurs médias d'exploitation (téléchargement digital, interprétation, etc) c'est la responsibilité de l'éditeur d'obtenir et de distribuer les paiements associés à la composition à l'artiste pertinent.  Cependant, dans la plupart de pays l'accord entre le PRO et le compositeur supplante celui entre le label, éditeur et compositeur, donc une fois qu'une chanson produit du revenu à travers l'interprétation ou la licence méchanique, le PRO est la première organisation qui s'occupe de la collecte pour le compositeur. (ex. EMI Music Publishing) (255 caractères au maximum)                       
+Notes Supplémentaires: Vous pouvez ajouter 'Copyright Control' ou 'Label Control' dependant du cas dans chaque territoire.</description>
+  </item>
+  <item name="Supplier Track ID" type="track">
+    <description lang="es_ES">Se puede usar para guardar vuestro propio ID para este tema. Se incluyen estos valores en los extractos trimestrales de ventas y pueden ser útiles para la contabilidad.</description>
+    <description lang="en_US">May be used to store your own ID for this track. These values are included in quarterly sales statements and are often used for bookkeeping purposes</description>
+    <description lang="it_IT">Puó essere usato per la  memorizzare l'ID della traccia. Queste cifre saranno incluse nelle ricevute trimestarli di pagamento e sono utilizzate di solito per la contabilitá.</description>
+    <description lang="fr_FR">Ceci peut être utilisé afin de sauvegarder votre propre ID pour ce titre. Ces valeurs s'affichent dans les relevés trimestriels de ventes et sont souvent bien utiles pour la comptabilité.</description>
+  </item>
+  <item name="International Standard Recording Code (ISRC)" type="track" link="http://www.ifpi.org">
+    <description lang="es_ES">ISRC es un código standard internacional para identificar de manera única y definitiva grabaciones audio. Un código ISRC consiste de 12 caracteres y identifica una grabación particular y no la canción en si.  Por lo tanto, diferentes grabaciones, edits, y remixes de la misma canción tendrán su propio código ISRC.  Beatport recomienda el uso de ISRC y la inscripción con el organismo responsable es gratuito.</description>
+    <description lang="en_US">ISRC is an international standard recording code for uniquely and permanently identifying sound recordings. An ISRC code is 12 characters long and identifies a particular recording, not the song itself. Therefore, different recordings, edits, and remixes of the same song will each have their own ISRC code. ISRCs are strongly recommended by Beatport, and registration with the ISRC registration authority is free. http://www.ifpi.org</description>
+    <description lang="it_IT">ISCR é un codice standard internazionale per le registarzioni per identificare unicamente e definitivamente registrazioni audio. Un codice ISCR é formato da 12 caratterie identifica una particolare registrazione, non la traccia in sé. Quindi differenti registrazioni, edits e remix di una stessa traccia avranno il loro proprio codice ISCR. L'ISCR é fortemente raccomandato da Beatport e la registrazione con l'ente ISCR é gratuita.  http://www.ifpi.org</description>
+    <description lang="fr_FR">ISRC est un code standard international pour identifier uniquement et definitivement des enregistrements audio.  Un code ISRC est 12 caractère de longeur et identifie un enregistrement particulier, et pas la chanson en soi.  Donc les différents enregistrements, édits et remixes de la même chanson auront leur propre code IRSC.  Beatport recommande bien l'usage des codes ISRC et l'inscription avec l'organisme responsable est gratuite. http://www.ifpi.org</description>
+  </item>
+  <item name="International Standard Musical Work Code (ISWC)" type="track" link="http://www.ifpi.org">
+    <description lang="es_ES">International Standard Musical Work Code (ISO 15707) es un identificador único para obras musicales (no grabaciones) parecido al ISBN. http://www.iswc.org es el organismo responsable.</description>
+    <description lang="en_US">International Standard Musical Work Code (ISO 15707) is a unique identifier for musical works (not recordings), similar to ISBN.  http://www.iswc.org is the official registration authority.</description>
+    <description lang="it_IT">ISWC, acronimo inglese di International Standard Musical Work Code (ISO 15707) identifica i unicamente i lavori musicali (non le registrazioni), simile al ISBN per i libri. http://www.iswc.org é l'ente ufficiale per la registrazione.</description>
+    <description lang="fr_FR">International Standard Musical Work Code (ISO 15707) est un identificateur unique pour des oeuvres musicales (pas pour les enregistrements), similaire au ISBN. http://www.iswc.org est l'organisme officiel.</description>
+  </item>
+  <item name="Territory Rights" type="track" link="http://musicians.about.com/od/ip/g/musiclicensing.htm">
+    <description lang="es_ES">Los territorios en los que un tema está autorizado venderse de forma digital a través de Beatport.  Los usuarios fuera de los terriotrios permitidos no podrán comprar el tema.</description>
+    <description lang="en_US">The territories in which a track is licensed for digital sale through Beatport. Users outside of the permitted territories will be unable to purchase the track.</description>
+    <description lang="it_IT">I territori per i quali la traccia é autorizzata ad essere venduta attraverso Beatport. Gli utenti al di fuori di questi territori autorizzati non potranno acquistare la traccia.</description>
+    <description lang="fr_FR">Les territoires où un tire est permis d'être vendu digitalement à travers Beatport.  Les utilisateurs en dehors des territoires stipulés ne pourront pas acheter ce titre.</description>
+  </item>
+  <item name="Artists" type="track">
+    <description lang="es_ES">Los artistas asociados con tema como aparecen en Beatport.  Cada artista debe especificarse individualmente.  Por ejemplo, un duo conocido como 'Artista1 &amp; Artista2' debe introducirse con los nombres separados.</description>
+    <description lang="en_US">The artist(s) associated with the track, as displayed on Beatport. Each artist should be specified individually. For example, a duo known as 'Artist1 &amp;amp; Artist2' should be entered separately.</description>
+    <description lang="it_IT">l`artista o gli artisti associati alla traccia, come compare su Beatport. Ogni artista devve essere specificato individualmente. Per esempio un duo conosciuto come "Artista1 &amp; Artista2" deve essere inserito con i nomi separati.</description>
+    <description lang="fr_FR">Les artistes associés avec titre, comme ils apparaissent sur Beatport. Il faut stipuler chaque artiste individuellement.  Par exemple, un duo connu comme 'Artiste1 &amp; Artiste 2' doivent apparaître avec les noms séparés.</description>
+  </item>
+  <item name="Remixers" type="track">
+    <description lang="es_ES">El(los) remixer(s) asociado(s) con esta versión/remix del tema como aparece(n) en Beatport. Cada artista debe especificarse individualmente. Por ejemplo, un duo conocido como 'Artista1 &amp; Artista2' debe introducirse con los nombres separados.</description>
+    <description lang="en_US">The remixer(s) associated with this version / remix of the track, as displayed on Beatport. Each artist should be specified individually. For example, a duo known as 'Artist1 &amp;amp; Artist2' should be entered separately.</description>
+    <description lang="it_IT">Il/i remixer associato a questa versione / remix della traccia, come appare su Beatport. Gni artista deve essere specificato  individualmente. Per esempio un duo conosciuto come "Artista1 &amp; Artista2" deve essere inserito con i nomi separati.</description>
+    <description lang="fr_FR">Les remixeurs associés avec cette version/remix du titre comme ils apparaissent sur Beatport. Il faut stipuler chaque artiste individuellement. Par exemple, un duo connu comme 'Artiste1 &amp; Artiste 2' doivent apparaître avec les noms séparés.</description>
+  </item>
+  <item name="Songwriters" type="track" link="http://en.wikipedia.org/wiki/Performance_rights_organisation">
+    <description lang="es_ES">Los nombres legales de los productores asociados con el tema.  Esta información es necesaria para los organizaciones relacionadas con los derechos de autor para la recaudación y distribución de las regalías de artista.  La función de una organización de derechos de autor (PRO) es recaudar las regalías de artista por sus miembros, compositores y editores de música.  Leugo el PRO distribuye estas regalías a sus miembros que han generado los ingresos.
+Notas Adicionales: Hay que introducir todos los compositores por separado. Hay que introducir el nombre oficial del compositor (ej. John Doe en vez de J. Doe), y no hay que usar el apodo o alias a no ser que éste último sea el nombre oficial.</description>
+    <description lang="en_US">The legal names of the writers of lyrics and musical composition associated with the track. This information is used by Performing Rights Organizations (PROs) to determine ownership of a track and is used to collect and distribute artist royalties appropriately. A Performing Rights Organization (PRO) is a regional organization, who collect artist royalties world wide and distribute back to the individuals associated with the income. 
+Additional Notes:
+Makes sure to add all songwriters individually.
+Please add the fully registered songwriter name (e.g. John Doe instead of J. Doe)
+Do not use nickname or common stage/performer/DJ name unless this is the registered name..</description>
+    <description lang="it_IT">I nomi legali degli autori del testo e della composizione musicale associata alla traccia. Questa informazione serve alle organizzazioni per il diritto d’autore (PROs- Performing Rights Organizations) per determinare la proprietá di una traccia ed é usata per riscuotere e distribuire adeguatamente i pagamenti dei diritti d’autore. Un’organizzazione per i diritti d’autore (PRO) é un’organizzazione regionale che riscuote i diritti d’autore in tutto il mondo e li ridistribuisce agli individui associati all’entrata.
+Nota aggiuntiva: 
+Si faccia attenzione ad aggiungere tutti gli autori individualmente.
+Si prega di inserire il nome registarto dell’autore al completo (per esempio John Doe, non J. Doe).
+Non usare soprannomi o nomi da concerto/performance/Dj a meno che non siano registarti come tali.</description>
+    <description lang="fr_FR">Les noms légaux des producteurs associés au titre. Cette information est nécessaire pour les organisations des droits d'auteur (Performing Rights Organistations - PROs). Un PRO est une organisation régionale qui s'occupe de la collecte des royalties dans le monde entier et puis de la redistribution aux individus qui ont produit les revenus.                           
+Notes Supplémentaires: Assurez-vous d'entrer tous les compositeurs séparément.  Veuillez ajouter le nom officiel du compositeur (ex. John Doe au lieu de J. Doe). Ne pas utiliser surnom ou sobriquet à moins que ce dernier ne soit le nom officiel.</description>
+  </item>
+</help>

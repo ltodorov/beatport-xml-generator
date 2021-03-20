@@ -1,11 +1,13 @@
 /**
- * List of the author names sorted by key alphabetically
+ * List of the author names sorted by key alphabetically.
  * A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
  */
 
 enum Artists {
+    "Ahmet Sendil" = "Ahmet Sendil",
     "Arthur M" = "Artour Male",
     "Atakan Ergin" = "Atakan Ergin",
+    "Dammex" = "Fatih Keles",
     "DJ Tarkan" = "Tarkan Ors",
     "Er&Man" = "Erman Kasapbasi",
     "Gurkan Asik" = "Gurkan Asik",

@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="4.0.1">
+	<xs:element
+		name="release"
+		type="releaseType">
+		<xs:annotation>
+			<xs:documentation>Release is the root node of the document.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="releaseType">
+		<xs:annotation>
+			<xs:documentation>Defines the root release element.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+            <xs:element
+                name="album_action"
+                type="xs:string"
+                minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Product Offer action, either insert or delete</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+			<xs:element
+				name="aggregatorName"
+				type="latinString255Type"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Aggregator Name or Parent Company submitting the release
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element
+				name="labelName"
+				type="latinString100Type"
+				minOccurs="1" />
+			<xs:element
+				name="UPC_EAN"
+				minOccurs="0"
+				type="UPC_EANType">
+				<xs:annotation>
+					<xs:documentation>
+						Universal Product Code / European Article Number
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element
+				name="catalogNumber"
+				type="catalogNumberType"
+				minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Example: BP001, BP002 ... BP005 - Catalog Numbers should have unique
+						value for every release in your catalog.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element
+				name="coverArtFilename"
+				minOccurs="0"
+				type="coverartFilenameType">
+				<xs:annotation>
+					<xs:documentation>
+						Example: 123456789.jpg. Dimensions: SQUARE, minimum 500x500 pixels.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element
+				name="releaseTitle"
+				type="latinString255Type"
+				minOccurs="1" />
+			<xs:element
+				name="releaseDescription"
+				minOccurs="0"
+				type="latinStringType">
+				<xs:annotation>
+					<xs:documentation>
+						Description might include: Promotional feedback, Artists currently
+						supporting the release, Biographies of the producers/artists, and/or
+						Copyright and publishing information. The release description is
+						displayed on beatport's website.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element
+				name="releaseSalesType"
+				minOccurs="0"
+				type="releaseSalesType">
+				<xs:annotation>
+					<xs:documentation>
+						Describes the sales type for this release. "release" is the default,
+						and allows all tracks to be downloaded individually or as a full
+						release. "album" prevents tracks from being downloaded individually.
+						"mix" releases will show up on the "mixes" tab. If unsure, use
+						"releases".
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element
+				name="GRID"
+				type="GRIDType"
+				minOccurs="0" />
+			<xs:element
+				name="tracks"
+				type="tracksType"
+				minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType
+		name="tracksType"
+		mixed="true">
+		<xs:sequence>
+			<xs:element
+				name="track"
+				type="trackType"
+				maxOccurs="unbounded"
+				minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="trackType">
+		<xs:annotation>
+			<xs:documentation>
+				All the attributes of a track are contained within this element.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="albumOnly" type="booleanIntType"
+				minOccurs="1" default="0" />
+			<xs:element name="trackNumber" type="xs:positiveInteger"
+				minOccurs="1" />
+			<xs:element name="ISRC" minOccurs="0" type="ISRCType">
+				<xs:annotation>
+					<xs:documentation>
+						ISO-3901 - International Standard Recording Code
+						ISRC. http://www.ifpi.org is the the ISRC
+						registration authority.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="trackPublisher" type="latinString255Type"
+					minOccurs="1" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>
+							A publisher is an entity that oversees the
+							royalty collection of a composition for
+							songwriters and composers.   When a production
+							has generated income through various mediums of
+							exploitation (digital download, performance,
+							etc.) it is the publishers responsibility to
+							obtain and distribute the payments associated
+							with the composition to the respective artist.
+							However, In most countries the PRO/songwriter
+							agreement supersedes the
+							label-publisher-songwriter relationship.
+							Therefore, when a song generates income by
+							performance or mechanical royalty; The PRO is
+							the first organization to collect for a
+							songwriter (e.g., EMI Music Publishing).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:element name="trackTitle" type="latinString200Type"
+				minOccurs="1" />
+			<xs:element name="trackMixVersion" type="latinString100Type"
+				minOccurs="0" default="Original Mix" />
+			<xs:element name="originalReleaseDate" type="xs:date"
+				minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						The OriginalReleaseDate field is in the format
+						YYYY-MM-DD. OriginalReleaseDate should be a
+						future date ONLY if the material has never been
+						released on any other medium (Vinyl, CD,
+						Digital, etc) in the past. If the material has
+						been available at any other time on any other
+						medium, you must use the date at which it
+						originally became available for purchase.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="beatportExclusive"
+				type="beatportExclusiveType" minOccurs="1" maxOccurs="1" />
+			<xs:element name="trackArtists" type="trackArtistsType"
+				minOccurs="1" />
+			<xs:element name="trackRemixers" type="trackRemixersType"
+				minOccurs="0" />
+			<xs:element name="trackAudioFile" type="trackAudioFileType"
+				minOccurs="1" />
+			<xs:element name="countriesAvailable"
+				type="countriesAvailableType" minOccurs="1" maxOccurs="1" />
+			<xs:element name="sourceTrackId" minOccurs="0"
+				type="sourceTrackIdType">
+				<xs:annotation>
+					<xs:documentation>
+						This is a string used by the label to identify
+						this particular track.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="trackGenre" minOccurs="0"
+				type="trackGenreType" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Recommend a genre or genre/subgenre for this
+						particular track. Please see comments about
+						genres which have been deprecated below. This is
+						only a recommendation. Beatport reserves the
+						right to determine the final published genre
+						and/or subgenre.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ISWC" type="ISWCType" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="trackCopyright" type="trackCopyrightType"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="songwriters" type="songwritersType"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="trackArtistsType">
+		<xs:annotation>
+			<xs:documentation>
+				Please list artists one per node and NOT as a node containing a comma
+				separated list of multiple artists.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element
+				name="artistName"
+				type="latinString255Type"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="beatportExclusiveType">
+		<xs:annotation>
+			<xs:documentation>
+				Tracks can be Exclusive on Beatport for one of the
+				following periods: 0, 2, 4 or 8 week or
+				'lifetime'. Tracks which are Non-Exclusive
+				should be set to the period of '0' (default).
+
+				'0' = Non-Exclusive (default)
+				'2' = 2 Weeks Exclusive
+				'4' = 4 Weeks Exclusive
+				'8' = 8 Weeks Exclusive
+				'lifetime' = Lifetime Exclusive
+
+				If the label is on the Exclusive deal, then the
+				exclusive period agreed to in the exclusive agreement
+				must be selected. This period can be upgraded to a longer
+				duration, if desired.
+
+				Exclusive content must be receieved by Beatport at least
+				seven (7) business days prior to the scheduled release
+				date.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element
+				name="exclusivePeriod"
+				type="exclusivePeriodType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="trackRemixersType">
+		<xs:annotation>
+			<xs:documentation>
+				Please list remixers one per node and NOT as a node containing a comma
+				separated list of multiple remixers.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element
+				name="remixerName"
+				type="latinString255Type"
+				minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="trackAudioFileType">
+		<xs:sequence>
+			<xs:element
+				name="audioFilename"
+				type="audioFilenameType"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Example: 123456789.WAV || The following formats are accepted: wav
+						and aif. The filename extension must be .wav, .aif or .aiff. Quality
+						must be 44.1KHz, 16-bit
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:sequence
+				minOccurs="0"
+				maxOccurs="1">
+				<xs:element
+					name="digestType"
+					type="digestType">
+				</xs:element>
+				<xs:element
+					name="digestValue"
+					type="digestValueType">
+				</xs:element>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="countriesAvailableType">
+		<xs:annotation>
+			<xs:documentation>
+				ISO 3166-1 Country Codes. See iso.org for details. Countries that are listed
+				are those in which the material will be available for sale. The
+				(non-standard) 'WW' value indicates the material is available for worldwide
+				distribution. The following deprecated codes remain for compatibility and
+				will be translated as follows: ZR ... CD (Congo, Democratic Republic of the)
+				UK ... GB (Great Britain) CS ... RS (Serbia) and ME (Montenegro)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element
+				name="country"
+				minOccurs="1"
+				maxOccurs="246"
+				default="WW"
+				type="countryType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="GRIDType">
+		<xs:annotation>
+			<xs:documentation>Ensurese properly formated GRID</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="A1-?[A-z0-9]{5}-?[A-z0-9]{10}-?[A-z0-9]" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="latinStringType">
+		<xs:annotation>
+			<xs:documentation>Restricts character set to BasicLatin</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\p{IsBasicLatin}\p{IsLatin-1Supplement}]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="latinString50Type">
+		<xs:annotation>
+			<xs:documentation>
+				Extends latinString by restricting the length of string to 50 characters.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="latinStringType">
+			<xs:minLength value="1" />
+			<xs:maxLength value="50" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="latinString100Type">
+		<xs:annotation>
+			<xs:documentation>
+				Extends latinString by restricting the length of string to 100 characters.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="latinStringType">
+			<xs:minLength value="1" />
+			<xs:maxLength value="100" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="latinString200Type">
+		<xs:annotation>
+			<xs:documentation>
+				Extends latinString by restricting the length of string to 200 characters.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="latinStringType">
+			<xs:minLength value="1" />
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="latinString255Type">
+		<xs:annotation>
+			<xs:documentation>
+				Extends latinString by restricting the length of string
+				to 255 characters.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="latinStringType">
+			<xs:minLength value="1" />
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="booleanIntType">
+		<xs:annotation>
+			<xs:documentation>
+				Integer version of the boolean type. 0 = false, 1 = true.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="coverartFilenameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z0-9\(\)\.\-_/]+[.](png|jpeg|jpg|bmp|gif)" />
+			<xs:minLength value="5" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="audioFilenameType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="5" />
+			<xs:pattern value="[a-zA-Z0-9\(\)\.\-_/]+[.]((wav)|(aif)|(aiff))" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ISWCType">
+		<xs:annotation>
+			<xs:documentation>
+				ISO 15707 - International Standard Musical Work Code. An ISWC identifies
+				works, not recordings. The official registration authority is located here:
+				http://www.iswc.org/en/html/Home.html.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="T-\d{9}-\d{1}" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="trackCopyrightType">
+		<xs:annotation>
+			<xs:documentation>
+				Please fill in any copyright information that this track has, up to 255
+				characters in length.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="songwritersType">
+		<xs:annotation>
+			<xs:documentation>Holds multiple songwriterType elements</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element
+				name="songwriter"
+				type="songwriterType"
+				minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="songwriterType">
+		<xs:annotation>
+			<xs:documentation>
+				Describes a songwriter by name and type (enumerated)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element
+				name="name"
+				type="latinString255Type"
+				maxOccurs="1"
+				minOccurs="1" />
+			<xs:element
+				name="type"
+				maxOccurs="1"
+				minOccurs="1"
+				type="songwriterRoleType">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="releaseSalesType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="release" />
+			<xs:enumeration value="album" />
+			<xs:enumeration value="mix" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="digestValueType">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse" />
+			<xs:maxLength value="50" />
+			<xs:pattern value="[a-fA-F0-9]*" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="catalogNumberType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9A-Z]+" />
+			<xs:minLength value="1" />
+			<xs:maxLength value="45" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UPC_EANType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{12,13}" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ISRCType">
+		<xs:annotation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="12" />
+			<xs:pattern value="[A-Z]{2}[A-Z0-9]{3}\d{7}" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sourceTrackIdType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="trackGenreType">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse" />
+            <xs:enumeration value="Breaks" />
+            <xs:enumeration value="Breaks | 2 Step" />
+            <xs:enumeration value="Breaks | Acid" />
+            <xs:enumeration value="Breaks | Big Beat" />
+            <xs:enumeration value="Breaks | Electro" />
+            <xs:enumeration value="Breaks | Funky Breaks" />
+            <xs:enumeration value="Breaks | Hardcore Breaks" />
+            <xs:enumeration value="Breaks | Nu Skool" />
+            <xs:enumeration value="Breaks | Progressive" />
+            <xs:enumeration value="Chill Out" />
+            <xs:enumeration value="Chill Out | Acid Jazz" />
+            <xs:enumeration value="Chill Out | Ambient" />
+            <xs:enumeration value="Chill Out | Downtempo" />
+            <xs:enumeration value="Chill Out | Nu-Jazz" />
+            <xs:enumeration value="Chill Out | Trip-Hop" />
+            <xs:enumeration value="Deep House" />
+            <xs:enumeration value="DJ Tools" />
+            <xs:enumeration value="DJ Tools | Acapellas" />
+            <xs:enumeration value="DJ Tools | loops" />
+            <xs:enumeration value="DJ Tools | Reprise" />
+            <xs:enumeration value="Drum &amp; Bass" />
+            <xs:enumeration value="Drum &amp; Bass | Breakcore" />
+            <xs:enumeration value="Drum &amp; Bass | Dark Step" />
+            <xs:enumeration value="Drum &amp; Bass | Electro Step" />
+            <xs:enumeration value="Drum &amp; Bass | Experimental" />
+            <xs:enumeration value="Drum &amp; Bass | Hardstep" />
+            <xs:enumeration value="Drum &amp; Bass | Intelligent" />
+            <xs:enumeration value="Drum &amp; Bass | Jump Up" />
+            <xs:enumeration value="Drum &amp; Bass | Jungle" />
+            <xs:enumeration value="Drum &amp; Bass | Liquid" />
+            <xs:enumeration value="Drum &amp; Bass | Old School" />
+            <xs:enumeration value="Drum &amp; Bass | Ragga" />
+            <xs:enumeration value="Drum &amp; Bass | Techstep / Electrostep" />
+            <xs:enumeration value="Drum &amp; Bass | Vocal" />
+            <xs:enumeration value="Dubstep" />
+            <xs:enumeration value="Electro House" />
+            <xs:enumeration value="Electronica" />
+            <xs:enumeration value="Electronica | Electro" />
+            <xs:enumeration value="Electronica | Experimental/Noise/Industrial" />
+            <xs:enumeration value="Electronica | IDM" />
+            <xs:enumeration value="Electronica | Indie" />
+            <xs:enumeration value="Electronica | LeftField" />
+            <xs:enumeration value="Funk / R&amp;B" />
+            <xs:enumeration value="Glitch Hop" />
+            <xs:enumeration value="Hard Dance" />
+            <xs:enumeration value="Hard Dance | Nu-NRG" />
+            <xs:enumeration value="Hardcore / Hard Techno" />
+            <xs:enumeration value="Hardcore / Hard Techno | Gabber" />
+            <xs:enumeration value="Hardcore / Hard Techno | Happy" />
+            <xs:enumeration value="Hip-Hop" />
+            <xs:enumeration value="House" />
+            <xs:enumeration value="House | Disco" />
+            <xs:enumeration value="House | Garage" />
+            <xs:enumeration value="House | Tribal" />
+            <xs:enumeration value="House | Vocal House" />
+            <xs:enumeration value="Indie Dance / Nu Disco" />
+            <xs:enumeration value="Indie Dance / Nu Disco | Indie Dance" />
+            <xs:enumeration value="Indie Dance / Nu Disco | Nu Disco" />
+            <xs:enumeration value="Minimal" />
+            <xs:enumeration value="Pop / Rock" />
+            <xs:enumeration value="Progressive House" />
+            <xs:enumeration value="Psy-Trance" />
+            <xs:enumeration value="Reggae / Dub" />
+            <xs:enumeration value="Tech House" />
+            <xs:enumeration value="Tech House | Acid" />
+            <xs:enumeration value="Techno" />
+            <xs:enumeration value="Techno | Acid" />
+            <xs:enumeration value="Techno | Detroit Techno" />
+            <xs:enumeration value="Techno | Dub Techno" />
+            <xs:enumeration value="Techno | Ghetto-Tek" />
+            <xs:enumeration value="Techno | Hard Techno" />
+            <xs:enumeration value="Techno | Melodic" />
+            <xs:enumeration value="Trance" />
+            <xs:enumeration value="Trance | Acid" />
+            <xs:enumeration value="Trance | Epic" />
+            <xs:enumeration value="Trance | Hard" />
+            <xs:enumeration value="Trance | Progressive" />
+            <xs:enumeration value="Trance | Tech" />
+            <xs:enumeration value="Trance | Tribal" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="exclusivePeriodType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="0" />
+			<xs:enumeration value="2" />
+			<xs:enumeration value="4" />
+			<xs:enumeration value="8" />
+			<xs:enumeration value="lifetime" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="countryType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2" />
+			<xs:enumeration value="WW" />
+			<xs:enumeration value="AD" />
+			<xs:enumeration value="AE" />
+			<xs:enumeration value="AF" />
+			<xs:enumeration value="AG" />
+			<xs:enumeration value="AI" />
+			<xs:enumeration value="AL" />
+			<xs:enumeration value="AM" />
+			<xs:enumeration value="AN" />
+			<xs:enumeration value="AO" />
+			<xs:enumeration value="AQ" />
+			<xs:enumeration value="AR" />
+			<xs:enumeration value="AS" />
+			<xs:enumeration value="AT" />
+			<xs:enumeration value="AU" />
+			<xs:enumeration value="AW" />
+			<xs:enumeration value="AX" />
+			<xs:enumeration value="AZ" />
+			<xs:enumeration value="BA" />
+			<xs:enumeration value="BB" />
+			<xs:enumeration value="BD" />
+			<xs:enumeration value="BE" />
+			<xs:enumeration value="BF" />
+			<xs:enumeration value="BG" />
+			<xs:enumeration value="BH" />
+			<xs:enumeration value="BI" />
+			<xs:enumeration value="BJ" />
+			<xs:enumeration value="BL" />
+			<xs:enumeration value="BM" />
+			<xs:enumeration value="BN" />
+			<xs:enumeration value="BO" />
+			<xs:enumeration value="BR" />
+			<xs:enumeration value="BS" />
+			<xs:enumeration value="BT" />
+			<xs:enumeration value="BV" />
+			<xs:enumeration value="BW" />
+			<xs:enumeration value="BY" />
+			<xs:enumeration value="BZ" />
+			<xs:enumeration value="CA" />
+			<xs:enumeration value="CC" />
+			<xs:enumeration value="CD" />
+			<xs:enumeration value="CF" />
+			<xs:enumeration value="CG" />
+			<xs:enumeration value="CH" />
+			<xs:enumeration value="CI" />
+			<xs:enumeration value="CK" />
+			<xs:enumeration value="CL" />
+			<xs:enumeration value="CM" />
+			<xs:enumeration value="CN" />
+			<xs:enumeration value="CO" />
+			<xs:enumeration value="CR" />
+			<xs:enumeration value="CU" />
+			<xs:enumeration value="CV" />
+			<xs:enumeration value="CX" />
+			<xs:enumeration value="CY" />
+			<xs:enumeration value="CZ" />
+			<xs:enumeration value="DE" />
+			<xs:enumeration value="DJ" />
+			<xs:enumeration value="DK" />
+			<xs:enumeration value="DM" />
+			<xs:enumeration value="DO" />
+			<xs:enumeration value="DZ" />
+			<xs:enumeration value="EC" />
+			<xs:enumeration value="EE" />
+			<xs:enumeration value="EG" />
+			<xs:enumeration value="EH" />
+			<xs:enumeration value="ER" />
+			<xs:enumeration value="ES" />
+			<xs:enumeration value="ET" />
+			<xs:enumeration value="FI" />
+			<xs:enumeration value="FJ" />
+			<xs:enumeration value="FK" />
+			<xs:enumeration value="FM" />
+			<xs:enumeration value="FO" />
+			<xs:enumeration value="FR" />
+			<xs:enumeration value="GA" />
+			<xs:enumeration value="GB" />
+			<xs:enumeration value="GD" />
+			<xs:enumeration value="GE" />
+			<xs:enumeration value="GF" />
+			<xs:enumeration value="GG" />
+			<xs:enumeration value="GH" />
+			<xs:enumeration value="GI" />
+			<xs:enumeration value="GL" />
+			<xs:enumeration value="GM" />
+			<xs:enumeration value="GN" />
+			<xs:enumeration value="GP" />
+			<xs:enumeration value="GQ" />
+			<xs:enumeration value="GR" />
+			<xs:enumeration value="GS" />
+			<xs:enumeration value="GT" />
+			<xs:enumeration value="GU" />
+			<xs:enumeration value="GW" />
+			<xs:enumeration value="GY" />
+			<xs:enumeration value="HK" />
+			<xs:enumeration value="HM" />
+			<xs:enumeration value="HN" />
+			<xs:enumeration value="HR" />
+			<xs:enumeration value="HT" />
+			<xs:enumeration value="HU" />
+			<xs:enumeration value="ID" />
+			<xs:enumeration value="IE" />
+			<xs:enumeration value="IL" />
+			<xs:enumeration value="IM" />
+			<xs:enumeration value="IN" />
+			<xs:enumeration value="IO" />
+			<xs:enumeration value="IQ" />
+			<xs:enumeration value="IR" />
+			<xs:enumeration value="IS" />
+			<xs:enumeration value="IT" />
+			<xs:enumeration value="JE" />
+			<xs:enumeration value="JM" />
+			<xs:enumeration value="JO" />
+			<xs:enumeration value="JP" />
+			<xs:enumeration value="KE" />
+			<xs:enumeration value="KG" />
+			<xs:enumeration value="KH" />
+			<xs:enumeration value="KI" />
+			<xs:enumeration value="KM" />
+			<xs:enumeration value="KN" />
+			<xs:enumeration value="KP" />
+			<xs:enumeration value="KR" />
+			<xs:enumeration value="KW" />
+			<xs:enumeration value="KY" />
+			<xs:enumeration value="KZ" />
+			<xs:enumeration value="LA" />
+			<xs:enumeration value="LB" />
+			<xs:enumeration value="LC" />
+			<xs:enumeration value="LI" />
+			<xs:enumeration value="LK" />
+			<xs:enumeration value="LR" />
+			<xs:enumeration value="LS" />
+			<xs:enumeration value="LT" />
+			<xs:enumeration value="LU" />
+			<xs:enumeration value="LV" />
+			<xs:enumeration value="LY" />
+			<xs:enumeration value="MA" />
+			<xs:enumeration value="MC" />
+			<xs:enumeration value="MD" />
+			<xs:enumeration value="ME" />
+			<xs:enumeration value="MF" />
+			<xs:enumeration value="MG" />
+			<xs:enumeration value="MH" />
+			<xs:enumeration value="MK" />
+			<xs:enumeration value="ML" />
+			<xs:enumeration value="MM" />
+			<xs:enumeration value="MN" />
+			<xs:enumeration value="MO" />
+			<xs:enumeration value="MP" />
+			<xs:enumeration value="MQ" />
+			<xs:enumeration value="MR" />
+			<xs:enumeration value="MS" />
+			<xs:enumeration value="MT" />
+			<xs:enumeration value="MU" />
+			<xs:enumeration value="MV" />
+			<xs:enumeration value="MW" />
+			<xs:enumeration value="MX" />
+			<xs:enumeration value="MY" />
+			<xs:enumeration value="MZ" />
+			<xs:enumeration value="NA" />
+			<xs:enumeration value="NC" />
+			<xs:enumeration value="NE" />
+			<xs:enumeration value="NF" />
+			<xs:enumeration value="NG" />
+			<xs:enumeration value="NI" />
+			<xs:enumeration value="NL" />
+			<xs:enumeration value="NO" />
+			<xs:enumeration value="NP" />
+			<xs:enumeration value="NR" />
+			<xs:enumeration value="NU" />
+			<xs:enumeration value="NZ" />
+			<xs:enumeration value="OM" />
+			<xs:enumeration value="PA" />
+			<xs:enumeration value="PE" />
+			<xs:enumeration value="PF" />
+			<xs:enumeration value="PG" />
+			<xs:enumeration value="PH" />
+			<xs:enumeration value="PK" />
+			<xs:enumeration value="PL" />
+			<xs:enumeration value="PM" />
+			<xs:enumeration value="PN" />
+			<xs:enumeration value="PR" />
+			<xs:enumeration value="PS" />
+			<xs:enumeration value="PT" />
+			<xs:enumeration value="PW" />
+			<xs:enumeration value="PY" />
+			<xs:enumeration value="QA" />
+			<xs:enumeration value="RE" />
+			<xs:enumeration value="RO" />
+			<xs:enumeration value="RS" />
+			<xs:enumeration value="RU" />
+			<xs:enumeration value="RW" />
+			<xs:enumeration value="SA" />
+			<xs:enumeration value="SB" />
+			<xs:enumeration value="SC" />
+			<xs:enumeration value="SD" />
+			<xs:enumeration value="SE" />
+			<xs:enumeration value="SG" />
+			<xs:enumeration value="SH" />
+			<xs:enumeration value="SI" />
+			<xs:enumeration value="SJ" />
+			<xs:enumeration value="SK" />
+			<xs:enumeration value="SL" />
+			<xs:enumeration value="SM" />
+			<xs:enumeration value="SN" />
+			<xs:enumeration value="SO" />
+			<xs:enumeration value="SR" />
+			<xs:enumeration value="ST" />
+			<xs:enumeration value="SV" />
+			<xs:enumeration value="SY" />
+			<xs:enumeration value="SZ" />
+			<xs:enumeration value="TC" />
+			<xs:enumeration value="TD" />
+			<xs:enumeration value="TF" />
+			<xs:enumeration value="TG" />
+			<xs:enumeration value="TH" />
+			<xs:enumeration value="TJ" />
+			<xs:enumeration value="TK" />
+			<xs:enumeration value="TL" />
+			<xs:enumeration value="TM" />
+			<xs:enumeration value="TN" />
+			<xs:enumeration value="TO" />
+			<xs:enumeration value="TR" />
+			<xs:enumeration value="TT" />
+			<xs:enumeration value="TV" />
+			<xs:enumeration value="TW" />
+			<xs:enumeration value="TZ" />
+			<xs:enumeration value="UA" />
+			<xs:enumeration value="UG" />
+			<xs:enumeration value="UM" />
+			<xs:enumeration value="US" />
+			<xs:enumeration value="UY" />
+			<xs:enumeration value="UZ" />
+			<xs:enumeration value="VA" />
+			<xs:enumeration value="VC" />
+			<xs:enumeration value="VE" />
+			<xs:enumeration value="VG" />
+			<xs:enumeration value="VI" />
+			<xs:enumeration value="VN" />
+			<xs:enumeration value="VU" />
+			<xs:enumeration value="WF" />
+			<xs:enumeration value="WS" />
+			<xs:enumeration value="YE" />
+			<xs:enumeration value="YT" />
+			<xs:enumeration value="ZA" />
+			<xs:enumeration value="ZM" />
+			<xs:enumeration value="ZW" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="digestType">
+		<xs:annotation>
+			<xs:documentation>
+				MD5 and SHA1 hashes function as a compact digital finger print of a file.
+				Because almost any change to a file will cause it's MD5/SHA1 hash to also
+				change, the hash is commonly used to verify the integrity of files (ensuring
+				data does not change as a result of file transfer, disk error, meddling,
+				etc)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MD5" />
+			<xs:enumeration value="SHA1" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="songwriterRoleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="composer" />
+			<xs:enumeration value="lyricist" />
+			<xs:enumeration value="arranger" />
+			<xs:enumeration value="author" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

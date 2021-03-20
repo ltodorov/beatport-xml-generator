@@ -12,7 +12,7 @@ const release: Release = {
         artists: ["DJ Tarkan"],
         mixVersion: "Tuna Ozdemir Remix",
         title: "Deep Down feat. Zara",
-        trackRemixers: ["Tuna Ozdemir"],
+        remixers: ["Tuna Ozdemir"],
         genre: Genres.DeepHouse,
         songwriters: [{
             name: Artists["Tuna Ozdemir"],

@@ -12,7 +12,7 @@ const release: Release = {
         artists: ["DJ Tarkan"],
         mixVersion: "Hiss Band Remix",
         title: "Lovely feat. Anduze",
-        trackRemixers: ["Hiss Band"],
+        remixers: ["Hiss Band"],
         genre: Genres.DeepHouse,
         songwriters: [{
             name: Artists["Hiss Band"],

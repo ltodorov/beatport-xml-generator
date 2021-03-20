@@ -1,14 +1,23 @@
 /**
  * Beatport accepts the following list of genres and sub-genres:
  * https://beatportops.zendesk.com/hc/en-us/articles/223805367-Beatport-Genres-and-Sub-genres
+ * Anyway, the list below matches the entries in assets/schema_genres.xml.
  */
 
 enum Genres {
-    Breaks = "Breaks / Breakbeat / UK Bass",
+    Breaks = "Breaks",
+    ChillOut = "Chill Out",
     DeepHouse = "Deep House",
+    DJTools = "DJ Tools",
+    ElectroHouse = "Electro House",
     Electronica = "Electronica",
     House = "House",
-    MelodicHouseTechno = "Melodic House & Techno",
+    HouseDisco = "House | Disco",
+    HouseGarage = "House | Garage",
+    HouseTribal = "House | Tribal",
+    HouseVocal = "House | Vocal",
+    IndieDanceNuDisco = "Indie Dance / Nu Disco",
+    Minimal = "Minimal",
     ProgressiveHouse = "Progressive House",
     TechHouse = "Tech House",
     Techno = "Techno",
