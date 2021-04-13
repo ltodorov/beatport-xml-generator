@@ -6,7 +6,7 @@ import { parseXml } from "libxmljs2";
 import { SalesType } from "./models/release";
 import { Template } from "./models/template";
 import { customer } from "./data/customer";
-import { release } from "./data/releases/nsr170";
+import { release } from "./data/releases/nsr171";
 
 const encoding = "utf8";
 
@@ -92,6 +92,8 @@ Promise.all([readTemplatePromise, readSchemaPromise])
                     writeFile(outputFile, xmlString);
                 }
             });
+        } else {
+            logError("XML validation has been failed!");
         }
     })
     .catch(logError);
