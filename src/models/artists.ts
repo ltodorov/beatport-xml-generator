@@ -10,6 +10,7 @@ enum Artists {
     "Dammex" = "Fatih Keles",
     "DJ Tarkan" = "Tarkan Ors",
     "Er&Man" = "Erman Kasapbasi",
+    "Goda Brother" = "Ahmed Ibrahim Mohamed ibrahima Goda",
     "Gurkan Asik" = "Gurkan Asik",
     "Hiss Band" = "Hamid Reza Sadri",
     "Ian Tosel" = "Yannis Topouzelidis",
