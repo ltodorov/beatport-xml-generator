@@ -22,6 +22,7 @@ enum Artists {
     "Tebra" = "Milojko Jaric",
     "Tuna Ozdemir" = "Tuna Ozdemir",
     "V-Sag" = "Vasilis Sagonas",
+    "Nathalie Bru" = "Nathalie Brucker"
 }
 
 export {

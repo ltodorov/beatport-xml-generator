@@ -6,7 +6,7 @@ import { parseXml } from "libxmljs2";
 import { SalesType } from "./models/release";
 import { Template } from "./models/template";
 import { customer } from "./data/customer";
-import { release } from "./data/releases/nsr176";
+import { release } from "./data/releases/nsr177";
 
 const encoding = "utf8";
 
