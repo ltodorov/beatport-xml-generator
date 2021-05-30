@@ -7,6 +7,7 @@ enum Artists {
     "Ahmet Sendil" = "Ahmet Sendil",
     "Arthur M" = "Artour Male",
     "Atakan Ergin" = "Atakan Ergin",
+    "Burak Cilt" = "Burak Cilt",
     "Dammex" = "Fatih Keles",
     "DJ Tarkan" = "Tarkan Ors",
     "Er&Man" = "Erman Kasapbasi",
