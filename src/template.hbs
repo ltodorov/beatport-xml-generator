@@ -31,9 +31,9 @@
         <artistName>{{artist}}</artistName>
         {{/each}}
       </trackArtists>
-      {{#if track.trackRemixers}}
+      {{#if track.remixers}}
       <trackRemixers>
-        {{#each track.trackRemixers as | remixer |}}
+        {{#each track.remixers as | remixer |}}
         <remixerName>{{remixer}}</remixerName>
         {{/each}}
       </trackRemixers>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>793519115999</UPC_EAN>
+  <catalogNumber>NSR169</catalogNumber>
+  <coverArtFilename>NSR169.jpg</coverArtFilename>
+  <releaseTitle>Lovely feat. Anduze (Hiss Band Remix)</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2025069</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Lovely feat. Anduze</trackTitle>
+      <trackMixVersion>Hiss Band Remix</trackMixVersion>
+      <originalReleaseDate>2021-04-15</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>Hiss Band</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>NSR169_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Deep House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Hamid Reza Sadri</name>
+          <type>author</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>

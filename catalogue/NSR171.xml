@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>793519137885</UPC_EAN>
+  <catalogNumber>NSR171</catalogNumber>
+  <coverArtFilename>NSR171.jpg</coverArtFilename>
+  <releaseTitle>Arezu</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2026120</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Arezu</trackTitle>
+      <trackMixVersion>Original Mix</trackMixVersion>
+      <originalReleaseDate>2021-05-15</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackAudioFile>
+        <audioFilename>NSR171_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Progressive House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <album_action>update</album_action>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>793519159290</UPC_EAN>
+  <catalogNumber>NSR178</catalogNumber>
+  <coverArtFilename>NSR178.jpg</coverArtFilename>
+  <releaseTitle>The Meaning (Burak Cilt Remix)</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2027637</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>The Meaning</trackTitle>
+      <trackMixVersion>Burak Cilt Remix</trackMixVersion>
+      <originalReleaseDate>2021-07-16</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>Burak Cilt</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>NSR178_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Deep House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Burak Cilt</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Burak Cilt</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>

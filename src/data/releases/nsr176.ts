@@ -3,6 +3,7 @@ import { Genres } from "../../models/genres";
 import { Release } from "../../models/release";
 
 const release: Release = {
+    albumAction: "update",
     UPC_EAN: 793519147303,
     catalogNumber: "NSR176",
     originalReleaseDate: "2021-06-15",

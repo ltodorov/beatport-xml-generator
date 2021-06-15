@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>793519155261</UPC_EAN>
+  <catalogNumber>NSR177</catalogNumber>
+  <coverArtFilename>NSR177.jpg</coverArtFilename>
+  <releaseTitle>One Day</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2027263</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>One Day</trackTitle>
+      <trackMixVersion>Original Mix</trackMixVersion>
+      <originalReleaseDate>2021-07-02</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+        <artistName>Nathalie Bru</artistName>
+      </trackArtists>
+      <trackAudioFile>
+        <audioFilename>NSR177_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Deep House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>composer</type>
+        </songwriter>
+        <songwriter>
+          <name>Nathalie Brucker</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Nathalie Brucker</name>
+          <type>lyricist</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>

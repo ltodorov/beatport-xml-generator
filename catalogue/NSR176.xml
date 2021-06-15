@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <album_action>update</album_action>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>793519147303</UPC_EAN>
+  <catalogNumber>NSR176</catalogNumber>
+  <coverArtFilename>NSR176.jpg</coverArtFilename>
+  <releaseTitle>Lovely (Goda Brother Remix)</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2026707</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Lovely feat. Anduze</trackTitle>
+      <trackMixVersion>Goda Brother Remix</trackMixVersion>
+      <originalReleaseDate>2021-06-15</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>Goda Brother</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>NSR176_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Progressive House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Ahmed Ibrahim Mohamed ibrahima Goda</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Ahmed Ibrahim Mohamed ibrahima Goda</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>
