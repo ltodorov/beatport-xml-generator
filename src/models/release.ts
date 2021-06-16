@@ -135,7 +135,7 @@ interface Track {
     // Therefore, when a song generates income by performance or mechanical
     // royalty; The PRO is the first organization to collect for a songwriter
     // (e.g., EMI Music Publishing).
-    trackPublisher?: string;
+    publisher?: string;
 }
 
 interface Songwriter {
