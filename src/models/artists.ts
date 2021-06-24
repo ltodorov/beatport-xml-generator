@@ -19,6 +19,7 @@ enum Artists {
     "Mr. Nu" = "Nuri Ankarali",
     "Robert Cristian" = "Robert Cristian",
     "RoelBeat" = "Maxim Poduschenko",
+    "Sezer Ulker" = "Sezer Ulker",
     "Tamer Kaan" = "Tamer Kaan",
     "Tebra" = "Milojko Jaric",
     "Tuna Ozdemir" = "Tuna Ozdemir",

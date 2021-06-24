@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>793519168070</UPC_EAN>
+  <catalogNumber>NSR179</catalogNumber>
+  <coverArtFilename>NSR179.jpg</coverArtFilename>
+  <releaseTitle>Rin Tin Tin (Sezer Ulker Remix)</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2028308</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Rin Tin Tin</trackTitle>
+      <trackMixVersion>Sezer Ulker Remix</trackMixVersion>
+      <originalReleaseDate>2021-07-30</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>Sezer Ulker</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>NSR179_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Sezer Ulker</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Sezer Ulker</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>
