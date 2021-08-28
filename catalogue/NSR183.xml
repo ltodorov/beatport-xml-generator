@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>665275504303</UPC_EAN>
+  <catalogNumber>NSR183</catalogNumber>
+  <coverArtFilename>NSR183.jpg</coverArtFilename>
+  <releaseTitle>Zea</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2030049</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Zea</trackTitle>
+      <trackMixVersion>Original Mix</trackMixVersion>
+      <originalReleaseDate>2021-12-10</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackAudioFile>
+        <audioFilename>NSR183_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Tech House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Tarkan Ors</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>
