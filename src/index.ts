@@ -1,14 +1,14 @@
 import * as path from "path";
 import * as fs from "fs";
-import { red, green } from "chalk";
-import { compile, registerHelper } from "handlebars";
 import { parseXml } from "libxmljs2";
-import { SalesType } from "./models/release";
-import { Template } from "./models/template";
-import { customer } from "./data/customer";
-import { release } from "./data/releases/nsr181";
+import { register } from "./helpers/register";
+import { logError } from "./helpers/log-error";
+import { readTemplate } from "./helpers/read-template";
+import { readSchema } from "./helpers/read-schema";
+import { writeFile } from "./helpers/write-file";
 
-const encoding = "utf8";
+// Change the release data to generate a XML
+import { release } from "./data/releases/nsr183";
 
 const srcDir = path.resolve(__dirname, "../src");
 const catalogDir = path.resolve(__dirname, "../catalogue");
@@ -17,59 +17,9 @@ const schemaFile = path.resolve(srcDir, "schema.xsd");
 const templateFile = path.resolve(srcDir, "template.hbs");
 const outputFile = path.resolve(catalogDir, `${release.catalogNumber}.xml`);
 
-registerHelper("trackNumber", (num: number) => num + 1);
+register();
 
-registerHelper("optionalValue", (defaultValue: string, value?: string) => value || defaultValue);
-
-registerHelper("albumOnly", (salesType: SalesType | undefined) => salesType === "album" ? 1 : 0);
-
-function readTemplate(file: string) {
-    return new Promise<string>((resolve, reject) => {
-        fs.readFile(file, encoding, (err, data) => {
-            if (err) {
-                reject(err.message);
-            } else {
-                const template = compile<Template>(data);
-                const xmlString = template({
-                    ...customer,
-                    ...release
-                });
-
-                resolve(xmlString);
-            }
-        });
-    });
-}
-
-function readSchema(file: string) {
-    return new Promise<string>((resolve, reject) => {
-        fs.readFile(file, encoding, (err, data) => {
-            if (err) {
-                reject(err.message);
-            } else {
-                resolve(data);
-            }
-        });
-    });
-}
-
-function writeFile(file: string, data: string) {
-    fs.writeFile(file, data, encoding, err => {
-        err && throwError(err.message);
-
-        console.log(green("Release has been generated successfully!"));
-    });
-}
-
-function throwError(errMessage: string) {
-    throw new Error(errMessage);
-}
-
-function logError(errMessage: string) {
-    console.error(red(errMessage));
-}
-
-const readTemplatePromise = readTemplate(templateFile).catch(logError);
+const readTemplatePromise = readTemplate(templateFile, release).catch(logError);
 const readSchemaPromise = readSchema(schemaFile).catch(logError);
 
 Promise.all([readTemplatePromise, readSchemaPromise])
@@ -85,7 +35,10 @@ Promise.all([readTemplatePromise, readSchemaPromise])
             fs.access(catalogDir, err => {
                 if (err) {
                     fs.mkdir(catalogDir, err => {
-                        err && throwError(err.message);
+                        if (err) {
+                            logError(err.message);
+                            return;
+                        }
                         writeFile(outputFile, xmlString);
                     });
                 } else {
