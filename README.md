@@ -18,11 +18,13 @@ Please update your current schema to include:
 
 * Update ```<album_action>update</album_action>```
 
-    Automatically update existing metadata, audio, or artwork on a release or track on Beatport. This action will not work to update removed/hidden content. *PLEASE NOTE, this action will only work to update existing tracks on a release and cannot be used to ADD content/tracks to an existing release.
+    Automatically update existing metadata, audio, or artwork on a release or track on Beatport. This action will not work to update removed/hidden content.
+
+    **PLEASE NOTE**, this action will only work to update existing tracks on a release and cannot be used to ADD content/tracks to an existing release.
 
 * Delete ```<album_action>delete</album_action>```
 
-    Remove / take down a product. This action does not work on individual tracks, it will only work on a full release / album. Please contact contentsupport@beatport.com if you would like to take down individual tracks.
+    Remove/take down a product. This action does not work on individual tracks, it will only work on a full release/album. Please contact contentsupport@beatport.com if you would like to take down individual tracks.
 
 ## Folder structure for all album actions when delivering content
 
