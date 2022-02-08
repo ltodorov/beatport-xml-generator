@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<release>
+  <aggregatorName>NO SMOKING RECORDINGS</aggregatorName>
+  <labelName>No Smoking Recordings</labelName>
+  <UPC_EAN>665275684906</UPC_EAN>
+  <catalogNumber>NSR187</catalogNumber>
+  <coverArtFilename>NSR187.jpg</coverArtFilename>
+  <releaseTitle>Afro Ritual</releaseTitle>
+  <releaseSalesType>release</releaseSalesType>
+  <tracks>
+    <track>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2034297</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>Afro Ritual</trackTitle>
+      <trackMixVersion>Original Mix</trackMixVersion>
+      <originalReleaseDate>2022-03-11</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>Mert Yenidunya</artistName>
+      </trackArtists>
+      <trackAudioFile>
+        <audioFilename>NSR187_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Afro House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Mert Yenidunya</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Mert Yenidunya</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
+    </track>
+  </tracks>
+</release>

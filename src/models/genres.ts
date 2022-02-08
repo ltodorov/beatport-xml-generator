@@ -5,6 +5,7 @@
  */
 
 enum Genres {
+    AfroHouse = "Afro House",
     Breaks = "Breaks",
     ChillOut = "Chill Out",
     DeepHouse = "Deep House",

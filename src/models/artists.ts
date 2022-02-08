@@ -16,6 +16,7 @@ enum Artists {
     "Hiss Band" = "Hamid Reza Sadri",
     "Ian Tosel" = "Yannis Topouzelidis",
     "Melih Aydogan" = "Melih Aydogan",
+    "Mert Yenidunya" = "Mert Yenidunya",
     "Mr. Nu" = "Nuri Ankarali",
     "Robert Cristian" = "Robert Cristian",
     "RoelBeat" = "Maxim Poduschenko",

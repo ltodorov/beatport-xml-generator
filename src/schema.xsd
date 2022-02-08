@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified"
-	attributeFormDefault="unqualified"
-	version="4.0.1">
-	<xs:element
-		name="release"
-		type="releaseType">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="4.0.1">
+	<xs:element name="release" type="releaseType">
 		<xs:annotation>
 			<xs:documentation>Release is the root node of the document.</xs:documentation>
 		</xs:annotation>
@@ -15,42 +10,27 @@
 			<xs:documentation>Defines the root release element.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-            <xs:element
-                name="album_action"
-                type="xs:string"
-                minOccurs="0">
+            <xs:element name="album_action" type="xs:string" minOccurs="0">
               <xs:annotation>
-                <xs:documentation>Product Offer action, either insert or delete</xs:documentation>
+                <xs:documentation>Product Offer action, either insert, update or delete</xs:documentation>
               </xs:annotation>
             </xs:element>
-			<xs:element
-				name="aggregatorName"
-				type="latinString255Type"
-				minOccurs="0">
+			<xs:element name="aggregatorName" type="string255Type" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						Aggregator Name or Parent Company submitting the release
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element
-				name="labelName"
-				type="latinString100Type"
-				minOccurs="1" />
-			<xs:element
-				name="UPC_EAN"
-				minOccurs="0"
-				type="UPC_EANType">
+			<xs:element name="labelName" type="string100Type" minOccurs="1" />
+			<xs:element name="UPC_EAN" minOccurs="0" type="UPC_EANType">
 				<xs:annotation>
 					<xs:documentation>
 						Universal Product Code / European Article Number
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element
-				name="catalogNumber"
-				type="catalogNumberType"
-				minOccurs="1">
+			<xs:element name="catalogNumber" type="catalogNumberType" minOccurs="1">
 				<xs:annotation>
 					<xs:documentation>
 						Example: BP001, BP002 ... BP005 - Catalog Numbers should have unique
@@ -58,24 +38,15 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element
-				name="coverArtFilename"
-				minOccurs="0"
-				type="coverartFilenameType">
+			<xs:element name="coverArtFilename" minOccurs="0" type="coverartFilenameType">
 				<xs:annotation>
 					<xs:documentation>
-						Example: 123456789.jpg. Dimensions: SQUARE, minimum 500x500 pixels.
+						Example: 123456789.jpg. Dimensions: SQUARE, minimum 1400x1400 pixels.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element
-				name="releaseTitle"
-				type="latinString255Type"
-				minOccurs="1" />
-			<xs:element
-				name="releaseDescription"
-				minOccurs="0"
-				type="latinStringType">
+			<xs:element name="releaseTitle" type="string255Type" minOccurs="1" />
+			<xs:element name="releaseDescription" minOccurs="0" type="xs:string">
 				<xs:annotation>
 					<xs:documentation>
 						Description might include: Promotional feedback, Artists currently
@@ -85,10 +56,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element
-				name="releaseSalesType"
-				minOccurs="0"
-				type="releaseSalesType">
+			<xs:element name="releaseSalesType" minOccurs="0" type="releaseSalesType">
 				<xs:annotation>
 					<xs:documentation>
 						Describes the sales type for this release. "release" is the default,
@@ -99,25 +67,13 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element
-				name="GRID"
-				type="GRIDType"
-				minOccurs="0" />
-			<xs:element
-				name="tracks"
-				type="tracksType"
-				minOccurs="1" />
+			<xs:element name="GRID" type="GRIDType" minOccurs="0" />
+			<xs:element name="tracks" type="tracksType" minOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType
-		name="tracksType"
-		mixed="true">
+	<xs:complexType name="tracksType" mixed="true">
 		<xs:sequence>
-			<xs:element
-				name="track"
-				type="trackType"
-				maxOccurs="unbounded"
-				minOccurs="1" />
+			<xs:element name="track" type="trackType" maxOccurs="unbounded" minOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="trackType">
@@ -127,10 +83,8 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="albumOnly" type="booleanIntType"
-				minOccurs="1" default="0" />
-			<xs:element name="trackNumber" type="xs:positiveInteger"
-				minOccurs="1" />
+			<xs:element name="albumOnly" type="booleanIntType" minOccurs="1" default="0" />
+			<xs:element name="trackNumber" type="xs:positiveInteger" minOccurs="1" />
 			<xs:element name="ISRC" minOccurs="0" type="ISRCType">
 				<xs:annotation>
 					<xs:documentation>
@@ -141,8 +95,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:sequence minOccurs="0" maxOccurs="1">
-				<xs:element name="trackPublisher" type="latinString255Type"
-					minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="trackPublisher" type="string255Type" minOccurs="1" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>
 							A publisher is an entity that oversees the
@@ -164,12 +117,9 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:element name="trackTitle" type="latinString200Type"
-				minOccurs="1" />
-			<xs:element name="trackMixVersion" type="latinString100Type"
-				minOccurs="0" default="Original Mix" />
-			<xs:element name="originalReleaseDate" type="xs:date"
-				minOccurs="1">
+			<xs:element name="trackTitle" type="string250Type" minOccurs="1" />
+			<xs:element name="trackMixVersion" type="string250Type" minOccurs="0" default="Original Mix" />
+			<xs:element name="originalReleaseDate" type="xs:date" minOccurs="1">
 				<xs:annotation>
 					<xs:documentation>
 						The OriginalReleaseDate field is in the format
@@ -183,18 +133,12 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="beatportExclusive"
-				type="beatportExclusiveType" minOccurs="1" maxOccurs="1" />
-			<xs:element name="trackArtists" type="trackArtistsType"
-				minOccurs="1" />
-			<xs:element name="trackRemixers" type="trackRemixersType"
-				minOccurs="0" />
-			<xs:element name="trackAudioFile" type="trackAudioFileType"
-				minOccurs="1" />
-			<xs:element name="countriesAvailable"
-				type="countriesAvailableType" minOccurs="1" maxOccurs="1" />
-			<xs:element name="sourceTrackId" minOccurs="0"
-				type="sourceTrackIdType">
+			<xs:element name="beatportExclusive" type="beatportExclusiveType" minOccurs="1" maxOccurs="1" />
+			<xs:element name="trackArtists" type="trackArtistsType" minOccurs="1" />
+			<xs:element name="trackRemixers" type="trackRemixersType" minOccurs="0" />
+			<xs:element name="trackAudioFile" type="trackAudioFileType" minOccurs="1" />
+			<xs:element name="countriesAvailable" type="countriesAvailableType" minOccurs="1" maxOccurs="1" />
+			<xs:element name="sourceTrackId" minOccurs="0" type="sourceTrackIdType">
 				<xs:annotation>
 					<xs:documentation>
 						This is a string used by the label to identify
@@ -202,8 +146,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="trackGenre" minOccurs="0"
-				type="trackGenreType" maxOccurs="1">
+			<xs:element name="trackGenre" minOccurs="0" type="trackGenreType" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>
 						Recommend a genre or genre/subgenre for this
@@ -215,12 +158,20 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ISWC" type="ISWCType" minOccurs="0"
-				maxOccurs="1" />
-			<xs:element name="trackCopyright" type="trackCopyrightType"
-				minOccurs="0" maxOccurs="1" />
-			<xs:element name="songwriters" type="songwritersType"
-				minOccurs="0" maxOccurs="1" />
+			<xs:element name="ISWC" type="ISWCType" minOccurs="0" maxOccurs="1" />
+			<xs:element name="trackCopyright" type="trackCopyrightType" minOccurs="0" maxOccurs="1" />
+			<xs:element name="songwriters" type="songwritersType" minOccurs="0" maxOccurs="1" />
+			<xs:element name="preOrderStartDate" type="xs:date" minOccurs="0" nillable="true">
+			   <xs:annotation>
+					<xs:documentation>
+						The preOrderStartDate field is in the format
+						YYYY-MM-DD.  preOrderStartDate should be a
+						date prior to the OriginalReleaseDate and signifies the date at which the track is available for purchase.
+						On this date the track preview will be available and the track will be available for purchase,
+						but the track's audio file will not be available for download until the OriginalReleaseDate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="trackArtistsType">
@@ -231,10 +182,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element
-				name="artistName"
-				type="latinString255Type"
-				maxOccurs="unbounded" />
+			<xs:element name="artistName" type="string240Type" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="beatportExclusiveType">
@@ -262,9 +210,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element
-				name="exclusivePeriod"
-				type="exclusivePeriodType" />
+			<xs:element name="exclusivePeriod" type="exclusivePeriodType" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="trackRemixersType">
@@ -275,37 +221,24 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element
-				name="remixerName"
-				type="latinString255Type"
-				minOccurs="0"
-				maxOccurs="unbounded" />
+			<xs:element name="remixerName" type="string240Type" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="trackAudioFileType">
 		<xs:sequence>
-			<xs:element
-				name="audioFilename"
-				type="audioFilenameType"
-				maxOccurs="1">
+			<xs:element name="audioFilename" type="audioFilenameType" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>
-						Example: 123456789.WAV || The following formats are accepted: wav
-						and aif. The filename extension must be .wav, .aif or .aiff. Quality
-						must be 44.1KHz, 16-bit
+						Example: 123456789.WAV || The following formats are accepted: wav,
+						aif and flac. The filename extension must be .wav, .aif, .aiff or flac.
+						Quality must be 44.1KHz, 16-bit.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:sequence
-				minOccurs="0"
-				maxOccurs="1">
-				<xs:element
-					name="digestType"
-					type="digestType">
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="digestType" type="digestType">
 				</xs:element>
-				<xs:element
-					name="digestValue"
-					type="digestValueType">
+				<xs:element name="digestValue" type="digestValueType">
 				</xs:element>
 			</xs:sequence>
 		</xs:sequence>
@@ -322,12 +255,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element
-				name="country"
-				minOccurs="1"
-				maxOccurs="246"
-				default="WW"
-				type="countryType" />
+			<xs:element name="country" minOccurs="1" maxOccurs="246" default="WW" type="countryType" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="GRIDType">
@@ -338,55 +266,46 @@
 			<xs:pattern value="A1-?[A-z0-9]{5}-?[A-z0-9]{10}-?[A-z0-9]" />
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="latinStringType">
+	<xs:simpleType name="string100Type">
 		<xs:annotation>
-			<xs:documentation>Restricts character set to BasicLatin</xs:documentation>
+			<xs:documentation>
+				Extends xs:string by restricting the length of string to 100 characters.
+			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[\p{IsBasicLatin}\p{IsLatin-1Supplement}]*"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="latinString50Type">
-		<xs:annotation>
-			<xs:documentation>
-				Extends latinString by restricting the length of string to 50 characters.
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="latinStringType">
-			<xs:minLength value="1" />
-			<xs:maxLength value="50" />
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="latinString100Type">
-		<xs:annotation>
-			<xs:documentation>
-				Extends latinString by restricting the length of string to 100 characters.
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="latinStringType">
 			<xs:minLength value="1" />
 			<xs:maxLength value="100" />
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="latinString200Type">
+	<xs:simpleType name="string240Type">
 		<xs:annotation>
 			<xs:documentation>
-				Extends latinString by restricting the length of string to 200 characters.
+				Extends xs:string by restricting the length of string to 240 characters.
 			</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="latinStringType">
+		<xs:restriction base="xs:string">
 			<xs:minLength value="1" />
-			<xs:maxLength value="255" />
+			<xs:maxLength value="240" />
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="latinString255Type">
+	<xs:simpleType name="string250Type">
 		<xs:annotation>
 			<xs:documentation>
-				Extends latinString by restricting the length of string
-				to 255 characters.
+				Extends xs:string by restricting the length of string to 250 characters.
 			</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="latinStringType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+			<xs:maxLength value="250" />
+		</xs:restriction>
+	</xs:simpleType>
+		<xs:simpleType name="string255Type">
+		<xs:annotation>
+			<xs:documentation>
+				Extends xs:string by restricting the length of string to 255 characters.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
 			<xs:minLength value="1" />
 			<xs:maxLength value="255" />
 		</xs:restriction>
@@ -411,7 +330,7 @@
 	<xs:simpleType name="audioFilenameType">
 		<xs:restriction base="xs:string">
 			<xs:minLength value="5" />
-			<xs:pattern value="[a-zA-Z0-9\(\)\.\-_/]+[.]((wav)|(aif)|(aiff))" />
+			<xs:pattern value="[a-zA-Z0-9\(\)\.\-_/]+[.]((wav)|(aif)|(aiff)|(flac))" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ISWCType">
@@ -443,11 +362,7 @@
 			<xs:documentation>Holds multiple songwriterType elements</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element
-				name="songwriter"
-				type="songwriterType"
-				minOccurs="0"
-				maxOccurs="unbounded" />
+			<xs:element name="songwriter" type="songwriterType" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="songwriterType">
@@ -457,16 +372,8 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element
-				name="name"
-				type="latinString255Type"
-				maxOccurs="1"
-				minOccurs="1" />
-			<xs:element
-				name="type"
-				maxOccurs="1"
-				minOccurs="1"
-				type="songwriterRoleType">
+			<xs:element name="name" type="string255Type" maxOccurs="1" minOccurs="1" />
+			<xs:element name="type" maxOccurs="1" minOccurs="1" type="songwriterRoleType">
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -509,85 +416,89 @@
 	<xs:simpleType name="trackGenreType">
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="collapse" />
-            <xs:enumeration value="Breaks" />
-            <xs:enumeration value="Breaks | 2 Step" />
-            <xs:enumeration value="Breaks | Acid" />
-            <xs:enumeration value="Breaks | Big Beat" />
-            <xs:enumeration value="Breaks | Electro" />
-            <xs:enumeration value="Breaks | Funky Breaks" />
-            <xs:enumeration value="Breaks | Hardcore Breaks" />
-            <xs:enumeration value="Breaks | Nu Skool" />
-            <xs:enumeration value="Breaks | Progressive" />
-            <xs:enumeration value="Chill Out" />
-            <xs:enumeration value="Chill Out | Acid Jazz" />
-            <xs:enumeration value="Chill Out | Ambient" />
-            <xs:enumeration value="Chill Out | Downtempo" />
-            <xs:enumeration value="Chill Out | Nu-Jazz" />
-            <xs:enumeration value="Chill Out | Trip-Hop" />
-            <xs:enumeration value="Deep House" />
+            <xs:enumeration value="140 / Deep Dubstep / Grime" />
+            <xs:enumeration value="140 / Deep Dubstep / Grime | Grime" />
+            <xs:enumeration value="Afro House" />
+            <xs:enumeration value="Afro House | Afro / Latin" />
+            <xs:enumeration value="Bass House" />
+            <xs:enumeration value="Breaks / Breakbeat / UK Bass" />
+            <xs:enumeration value="Breaks / Breakbeat / UK Bass | Glitch Hop" />
             <xs:enumeration value="DJ Tools" />
             <xs:enumeration value="DJ Tools | Acapellas" />
-            <xs:enumeration value="DJ Tools | loops" />
-            <xs:enumeration value="DJ Tools | Reprise" />
+            <xs:enumeration value="DJ Tools | Battle Tools" />
+            <xs:enumeration value="DJ Tools | Loops" />
+            <xs:enumeration value="Dance / Electro Pop" />
+            <xs:enumeration value="Dance / Electro Pop | Future Bass" />
+            <xs:enumeration value="Dance / Electro Pop | Pop" />
+            <xs:enumeration value="Dance / Electro Pop | Tropical House" />
+            <xs:enumeration value="Deep House" />
             <xs:enumeration value="Drum &amp; Bass" />
-            <xs:enumeration value="Drum &amp; Bass | Breakcore" />
-            <xs:enumeration value="Drum &amp; Bass | Dark Step" />
-            <xs:enumeration value="Drum &amp; Bass | Electro Step" />
-            <xs:enumeration value="Drum &amp; Bass | Experimental" />
-            <xs:enumeration value="Drum &amp; Bass | Hardstep" />
-            <xs:enumeration value="Drum &amp; Bass | Intelligent" />
+            <xs:enumeration value="Drum &amp; Bass | Deep" />
+            <xs:enumeration value="Drum &amp; Bass | Halftime" />
             <xs:enumeration value="Drum &amp; Bass | Jump Up" />
             <xs:enumeration value="Drum &amp; Bass | Jungle" />
             <xs:enumeration value="Drum &amp; Bass | Liquid" />
-            <xs:enumeration value="Drum &amp; Bass | Old School" />
-            <xs:enumeration value="Drum &amp; Bass | Ragga" />
-            <xs:enumeration value="Drum &amp; Bass | Techstep / Electrostep" />
-            <xs:enumeration value="Drum &amp; Bass | Vocal" />
             <xs:enumeration value="Dubstep" />
-            <xs:enumeration value="Electro House" />
+            <xs:enumeration value="Dubstep | Bass" />
+            <xs:enumeration value="Dubstep | Melodic Dubstep" />
+            <xs:enumeration value="Electro (Classic / Detroit / Modern)" />
             <xs:enumeration value="Electronica" />
-            <xs:enumeration value="Electronica | Electro" />
-            <xs:enumeration value="Electronica | Experimental/Noise/Industrial" />
-            <xs:enumeration value="Electronica | IDM" />
-            <xs:enumeration value="Electronica | Indie" />
-            <xs:enumeration value="Electronica | LeftField" />
-            <xs:enumeration value="Funk / R&amp;B" />
-            <xs:enumeration value="Glitch Hop" />
-            <xs:enumeration value="Hard Dance" />
-            <xs:enumeration value="Hard Dance | Nu-NRG" />
-            <xs:enumeration value="Hardcore / Hard Techno" />
-            <xs:enumeration value="Hardcore / Hard Techno | Gabber" />
-            <xs:enumeration value="Hardcore / Hard Techno | Happy" />
-            <xs:enumeration value="Hip-Hop" />
+            <xs:enumeration value="Electronica | Ambient" />
+            <xs:enumeration value="Funky House" />
+            <xs:enumeration value="Hard Dance / Hardcore" />
+            <xs:enumeration value="Hard Dance / Hardcore | Frenchcore" />
+            <xs:enumeration value="Hard Dance / Hardcore | Hard House" />
+            <xs:enumeration value="Hard Dance / Hardcore | Hard Trance" />
+            <xs:enumeration value="Hard Dance / Hardcore | Hardstyle" />
+            <xs:enumeration value="Hard Dance / Hardcore | Terror" />
+            <xs:enumeration value="Hard Dance / Hardcore | UK / Happy Hardcore" />
+            <xs:enumeration value="Hard Dance / Hardcore | Uptempo" />
+            <xs:enumeration value="Hard Techno" />
             <xs:enumeration value="House" />
-            <xs:enumeration value="House | Disco" />
-            <xs:enumeration value="House | Garage" />
-            <xs:enumeration value="House | Tribal" />
-            <xs:enumeration value="House | Vocal House" />
-            <xs:enumeration value="Indie Dance / Nu Disco" />
-            <xs:enumeration value="Indie Dance / Nu Disco | Indie Dance" />
-            <xs:enumeration value="Indie Dance / Nu Disco | Nu Disco" />
-            <xs:enumeration value="Minimal" />
-            <xs:enumeration value="Pop / Rock" />
+            <xs:enumeration value="House | Acid" />
+            <xs:enumeration value="House | Soulful" />
+            <xs:enumeration value="Indie Dance" />
+            <xs:enumeration value="Indie Dance | Dark Disco" />
+            <xs:enumeration value= "Jackin House" />
+            <xs:enumeration value="Mainstage" />
+            <xs:enumeration value="Mainstage | Big Room" />
+            <xs:enumeration value="Mainstage | Electro House" />
+            <xs:enumeration value="Mainstage | Future House" />
+            <xs:enumeration value="Mainstage | Midtempo" />
+            <xs:enumeration value="Mainstage | Speed House" />
+            <xs:enumeration value="Melodic House &amp; Techno" />
+            <xs:enumeration value="Minimal / Deep Tech" />
+            <xs:enumeration value="Minimal / Deep Tech | Bounce" />
+            <xs:enumeration value="Minimal / Deep Tech | Deep Tech" />
+            <xs:enumeration value="Nu Disco / Disco" />
+            <xs:enumeration value="Nu Disco / Disco | Funk / Soul" />
+            <xs:enumeration value="Nu Disco / Disco | Italo" />
+            <xs:enumeration value="Organic House / Downtempo" />
+            <xs:enumeration value="Organic House / Downtempo | Downtempo" />
+            <xs:enumeration value="Organic House / Downtempo | Organic House" />
             <xs:enumeration value="Progressive House" />
             <xs:enumeration value="Psy-Trance" />
-            <xs:enumeration value="Reggae / Dub" />
+            <xs:enumeration value="Psy-Trance | Full-On" />
+            <xs:enumeration value="Psy-Trance | Progressive" />
             <xs:enumeration value="Tech House" />
-            <xs:enumeration value="Tech House | Acid" />
-            <xs:enumeration value="Techno" />
-            <xs:enumeration value="Techno | Acid" />
-            <xs:enumeration value="Techno | Detroit Techno" />
-            <xs:enumeration value="Techno | Dub Techno" />
-            <xs:enumeration value="Techno | Ghetto-Tek" />
-            <xs:enumeration value="Techno | Hard Techno" />
-            <xs:enumeration value="Techno | Melodic" />
+            <xs:enumeration value="Techno (Peak Time / Driving)" />
+            <xs:enumeration value="Techno (Peak Time / Driving) | Driving" />
+            <xs:enumeration value="Techno (Peak Time / Driving) | Peak Time" />
+            <xs:enumeration value="Techno (Raw / Deep / Hypnotic)" />
+            <xs:enumeration value="Techno (Raw / Deep / Hypnotic) | Broken" />
+            <xs:enumeration value="Techno (Raw / Deep / Hypnotic) | Deep / Hypnotic" />
+            <xs:enumeration value="Techno (Raw / Deep / Hypnotic) | Dub" />
+            <xs:enumeration value="Techno (Raw / Deep / Hypnotic) | EBM" />
+            <xs:enumeration value="Techno (Raw / Deep / Hypnotic) | Raw" />
             <xs:enumeration value="Trance" />
-            <xs:enumeration value="Trance | Acid" />
-            <xs:enumeration value="Trance | Epic" />
-            <xs:enumeration value="Trance | Hard" />
             <xs:enumeration value="Trance | Progressive" />
             <xs:enumeration value="Trance | Tech" />
-            <xs:enumeration value="Trance | Tribal" />
+            <xs:enumeration value="Trance | Uplifting" />
+            <xs:enumeration value="Trance | Vocal" />
+            <xs:enumeration value="Trap / Wave" />
+            <xs:enumeration value="UK Garage / Bassline" />
+            <xs:enumeration value="UK Garage / Bassline | Bassline" />
+            <xs:enumeration value="UK Garage / Bassline | UK Garage" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="exclusivePeriodType">
@@ -633,6 +544,7 @@
 			<xs:enumeration value="BM" />
 			<xs:enumeration value="BN" />
 			<xs:enumeration value="BO" />
+			<xs:enumeration value="BQ" />
 			<xs:enumeration value="BR" />
 			<xs:enumeration value="BS" />
 			<xs:enumeration value="BT" />
@@ -655,6 +567,7 @@
 			<xs:enumeration value="CR" />
 			<xs:enumeration value="CU" />
 			<xs:enumeration value="CV" />
+			<xs:enumeration value="CW" />
 			<xs:enumeration value="CX" />
 			<xs:enumeration value="CY" />
 			<xs:enumeration value="CZ" />
@@ -809,8 +722,10 @@
 			<xs:enumeration value="SN" />
 			<xs:enumeration value="SO" />
 			<xs:enumeration value="SR" />
+			<xs:enumeration value="SS" />
 			<xs:enumeration value="ST" />
 			<xs:enumeration value="SV" />
+			<xs:enumeration value="SX" />
 			<xs:enumeration value="SY" />
 			<xs:enumeration value="SZ" />
 			<xs:enumeration value="TC" />
@@ -844,6 +759,7 @@
 			<xs:enumeration value="VU" />
 			<xs:enumeration value="WF" />
 			<xs:enumeration value="WS" />
+			<xs:enumeration value="XK" />
 			<xs:enumeration value="YE" />
 			<xs:enumeration value="YT" />
 			<xs:enumeration value="ZA" />
@@ -874,5 +790,4 @@
 			<xs:enumeration value="author" />
 		</xs:restriction>
 	</xs:simpleType>
-
 </xs:schema>

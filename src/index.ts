@@ -8,7 +8,7 @@ import { readSchema } from "./helpers/read-schema";
 import { writeFile } from "./helpers/write-file";
 
 // Change the release data to generate a XML
-import { release } from "./data/releases/nsr186";
+import { release } from "./data/releases/nsr187";
 
 const srcDir = path.resolve(__dirname, "../src");
 const catalogDir = path.resolve(__dirname, "../catalogue");
