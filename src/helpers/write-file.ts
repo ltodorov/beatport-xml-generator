@@ -1,5 +1,5 @@
 import fs from "fs";
-import { green } from "chalk";
+import chalk from "chalk";
 import { encoding } from "../config";
 import { logError } from "./log-error";
 
@@ -10,7 +10,7 @@ function writeFile(file: string, data: string) {
             return;
         }
 
-        console.log(green("Release has been generated successfully!"));
+        console.log(chalk.green("Release has been generated successfully!"));
     });
 }
 
