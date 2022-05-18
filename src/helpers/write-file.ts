@@ -10,7 +10,7 @@ function writeFile(file: string, data: string) {
             return;
         }
 
-        console.log(chalk.green("Release has been generated successfully!"));
+        console.log(chalk.green(`${file} has been generated!`));
     });
 }
 
