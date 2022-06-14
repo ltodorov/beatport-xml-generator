@@ -18,6 +18,8 @@ enum Artists {
     "Melih Aydogan" = "Melih Aydogan",
     "Mert Yenidunya" = "Mert Yenidunya",
     "Mr. Nu" = "Nuri Ankarali",
+    "Muratt Mat" = "Murat Benek",
+    "Nathalie Bru" = "Nathalie Brucker",
     "Robert Cristian" = "Robert Cristian",
     "RoelBeat" = "Maxim Poduschenko",
     "Sezer Ulker" = "Sezer Ulker",
@@ -25,7 +27,6 @@ enum Artists {
     "Tebra" = "Milojko Jaric",
     "Tuna Ozdemir" = "Tuna Ozdemir",
     "V-Sag" = "Vasilis Sagonas",
-    "Nathalie Bru" = "Nathalie Brucker"
 }
 
 export {

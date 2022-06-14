@@ -14,7 +14,7 @@ function register() {
 
     Handlebars.registerHelper(
         "albumOnly",
-        (salesType: SalesType | undefined) => salesType === "album" ? 1 : 0
+        (salesType?: SalesType) => salesType === "album" ? 1 : 0
     );
 }
 

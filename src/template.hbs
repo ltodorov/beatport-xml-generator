@@ -16,49 +16,49 @@
   <tracks>
     {{#each tracks as | track |}}
     <track>
-      <albumOnly>{{albumOnly ../salesType}}</albumOnly>
-      <trackNumber>{{trackNumber @index}}</trackNumber>
-      <ISRC>{{track.ISRC}}</ISRC>
-      <trackPublisher>{{optionalValue ../labelName track.publisher}}</trackPublisher>
-      <trackTitle>{{track.title}}</trackTitle>
-      <trackMixVersion>{{track.mixVersion}}</trackMixVersion>
-      <originalReleaseDate>{{optionalValue ../originalReleaseDate track.originalReleaseDate}}</originalReleaseDate>
-      <beatportExclusive>
-        <exclusivePeriod>{{optionalValue 0 track.exclusivePeriod}}</exclusivePeriod>
-      </beatportExclusive>
-      <trackArtists>
-        {{#each track.artists as | artist |}}
-        <artistName>{{artist}}</artistName>
-        {{/each}}
-      </trackArtists>
-      {{#if track.remixers}}
-      <trackRemixers>
-        {{#each track.remixers as | remixer |}}
-        <remixerName>{{remixer}}</remixerName>
-        {{/each}}
-      </trackRemixers>
-      {{/if}}
-      <trackAudioFile>
-        <audioFilename>{{../catalogNumber}}_{{trackNumber @index}}.wav</audioFilename>
-      </trackAudioFile>
-      <countriesAvailable>
-        {{#unless track.countries}}
-        <country>WW</country>
-        {{/unless}}
-        {{#each track.countries as | country |}}
-        <country>{{country}}</country>
-        {{/each}}
-      </countriesAvailable>
-      <trackGenre>{{track.genre}}</trackGenre>
-      <trackCopyright>{{optionalValue ../labelName track.copyright}}</trackCopyright>
-      <songwriters>
-        {{#each track.songwriters as | songwriter |}}
-        <songwriter>
-          <name>{{songwriter.name}}</name>
-          <type>{{songwriter.type}}</type>
-        </songwriter>
-        {{/each}}
-      </songwriters>
+    <albumOnly>{{albumOnly ../salesType}}</albumOnly>
+    <trackNumber>{{trackNumber @index}}</trackNumber>
+    <ISRC>{{track.ISRC}}</ISRC>
+    <trackPublisher>{{optionalValue ../labelName track.publisher}}</trackPublisher>
+    <trackTitle>{{track.title}}</trackTitle>
+    <trackMixVersion>{{track.mixVersion}}</trackMixVersion>
+    <originalReleaseDate>{{optionalValue ../originalReleaseDate track.originalReleaseDate}}</originalReleaseDate>
+    <beatportExclusive>
+      <exclusivePeriod>{{optionalValue 0 track.exclusivePeriod}}</exclusivePeriod>
+    </beatportExclusive>
+    <trackArtists>
+      {{#each track.artists as | artist |}}
+      <artistName>{{artist}}</artistName>
+      {{/each}}
+    </trackArtists>
+    {{#if track.remixers}}
+    <trackRemixers>
+      {{#each track.remixers as | remixer |}}
+      <remixerName>{{remixer}}</remixerName>
+      {{/each}}
+    </trackRemixers>
+    {{/if}}
+    <trackAudioFile>
+      <audioFilename>{{../catalogNumber}}_{{trackNumber @index}}.wav</audioFilename>
+    </trackAudioFile>
+    <countriesAvailable>
+      {{#unless track.countries}}
+      <country>WW</country>
+      {{/unless}}
+      {{#each track.countries as | country |}}
+      <country>{{country}}</country>
+      {{/each}}
+    </countriesAvailable>
+    <trackGenre>{{track.genre}}</trackGenre>
+    <trackCopyright>{{optionalValue ../labelName track.copyright}}</trackCopyright>
+    <songwriters>
+      {{#each track.songwriters as | songwriter |}}
+      <songwriter>
+        <name>{{songwriter.name}}</name>
+        <type>{{songwriter.type}}</type>
+      </songwriter>
+      {{/each}}
+    </songwriters>
     </track>
     {{/each}}
   </tracks>
