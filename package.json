@@ -4,6 +4,9 @@
   "description": "XML generator for content submissions to Beatport.com",
   "private": "true",
   "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "build": "rimraf dist && tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +17,7 @@
   "devDependencies": {
     "@tsconfig/node18-strictest-esm": "^1.0.1",
     "@types/node": "^18.7.14",
-    "chalk": "^4.1.2",
+    "chalk": "^5.0.1",
     "handlebars": "^4.7.7",
     "libxmljs2": "^0.30.1",
     "rimraf": "^3.0.2",

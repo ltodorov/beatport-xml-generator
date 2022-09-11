@@ -4,9 +4,9 @@ XML generator for content submissions to Beatport.com
 [![Node.js CI](https://github.com/ltodorov/beatport-xml-generator/actions/workflows/node.js.yml/badge.svg)](https://github.com/ltodorov/beatport-xml-generator/actions/workflows/node.js.yml)
 
 ## Steps to generate new XML
-1. Create new release in `src\data\releases`.
-2. Change release import in `src\index.ts`.
-3. Run `npm start`.
+1. Create a new release in `src/data/releases`.
+2. Change the release import in `src/index.ts`.
+3. Run `npm run build`.
 4. Release will be generated in `catalogue` folder.
 
 ## Update or delete a release via XML delivery
