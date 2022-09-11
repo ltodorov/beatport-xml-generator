@@ -1,6 +1,6 @@
-import { Artists } from "../../models/artists";
-import { Genres } from "../../models/genres";
-import { Release } from "../../models/release";
+import { Artists } from "../../models/artists.js";
+import { Genres } from "../../models/genres.js";
+import type { Release } from "../../models/release.js";
 
 const release: Release = {
     UPC_EAN: 665275812613,

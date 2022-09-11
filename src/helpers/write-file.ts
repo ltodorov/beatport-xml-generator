@@ -1,7 +1,7 @@
-import fs from "fs";
+import fs from "node:fs";
 import chalk from "chalk";
-import { encoding } from "../config";
-import { logError } from "./log-error";
+import { encoding } from "../config.js";
+import { logError } from "./log-error.js";
 
 function writeFile(file: string, data: string) {
     fs.writeFile(file, data, encoding, err => {

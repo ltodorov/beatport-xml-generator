@@ -1,6 +1,6 @@
-import { Artists } from "./artists";
-import { Genres } from "./genres";
-import { Country } from "./country";
+import type { Artists } from "./artists.js";
+import type { Genres } from "./genres.js";
+import type { Country } from "./country.js";
 
 interface Release {
 

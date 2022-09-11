@@ -1,5 +1,5 @@
 import Handlebars from "handlebars";
-import { SalesType } from "../models/release";
+import type { SalesType } from "../models/release.js";
 
 function register() {
     Handlebars.registerHelper(

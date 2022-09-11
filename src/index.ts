@@ -1,17 +1,17 @@
-import * as path from "path";
-import * as fs from "fs";
+import * as path from "node:path";
+import * as fs from "node:fs";
 import { parseXml } from "libxmljs2";
-import { register } from "./helpers/register";
-import { logError } from "./helpers/log-error";
-import { readTemplate } from "./helpers/read-template";
-import { readSchema } from "./helpers/read-schema";
-import { writeFile } from "./helpers/write-file";
+import { register } from "./helpers/register.js";
+import { logError } from "./helpers/log-error.js";
+import { readTemplate } from "./helpers/read-template.js";
+import { readSchema } from "./helpers/read-schema.js";
+import { writeFile } from "./helpers/write-file.js";
 
 // Change the release data to generate a XML
-import { release } from "./data/releases/nsr188";
+import { release } from "./data/releases/nsr188.js";
 
-const srcDir = path.resolve(__dirname, "../src");
-const catalogDir = path.resolve(__dirname, "../catalogue");
+const srcDir = path.resolve("src");
+const catalogDir = path.resolve("catalogue");
 
 const schemaFile = path.resolve(srcDir, "schema.xsd");
 const templateFile = path.resolve(srcDir, "template.hbs");

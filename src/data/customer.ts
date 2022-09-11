@@ -1,4 +1,4 @@
-import { Customer } from "../models/customer";
+import type { Customer } from "../models/customer.js";
 
 const customer: Customer = {
     aggregatorName: "NO SMOKING RECORDINGS",

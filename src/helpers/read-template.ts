@@ -1,9 +1,9 @@
-import fs from "fs";
+import fs from "node:fs";
 import Handlebars from "handlebars";
-import { encoding } from "../config";
-import { Template } from "../models/template";
-import { Release } from "../models/release";
-import { customer } from "../data/customer";
+import { encoding } from "../config.js";
+import type { Template } from "../models/template.js";
+import type { Release } from "../models/release.js";
+import { customer } from "../data/customer.js";
 
 function readTemplate(file: string, release: Release) {
     return new Promise<string>((resolve, reject) => {

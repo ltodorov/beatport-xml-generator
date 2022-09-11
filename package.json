@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "XML generator for content submissions to Beatport.com",
   "private": "true",
+  "type": "module",
   "scripts": {
     "build": "rimraf dist && tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +12,7 @@
   "author": "Lyubomir Todorov",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@tsconfig/node18-strictest-esm": "^1.0.1",
     "@types/node": "^18.7.14",
     "chalk": "^4.1.2",
     "handlebars": "^4.7.7",

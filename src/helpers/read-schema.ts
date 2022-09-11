@@ -1,5 +1,5 @@
-import fs from "fs";
-import { encoding } from "../config";
+import fs from "node:fs";
+import { encoding } from "../config.js";
 
 function readSchema(file: string) {
     return new Promise<string>((resolve, reject) => {
