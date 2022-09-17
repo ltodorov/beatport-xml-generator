@@ -9,40 +9,40 @@
   <releaseSalesType>release</releaseSalesType>
   <tracks>
     <track>
-    <albumOnly>0</albumOnly>
-    <trackNumber>1</trackNumber>
-    <ISRC>QZKWA2037244</ISRC>
-    <trackPublisher>No Smoking Recordings</trackPublisher>
-    <trackTitle>The Meaning</trackTitle>
-    <trackMixVersion>Muratt Mat Remix</trackMixVersion>
-    <originalReleaseDate>2022-07-15</originalReleaseDate>
-    <beatportExclusive>
-      <exclusivePeriod>0</exclusivePeriod>
-    </beatportExclusive>
-    <trackArtists>
-      <artistName>DJ Tarkan</artistName>
-    </trackArtists>
-    <trackRemixers>
-      <remixerName>Muratt Mat</remixerName>
-    </trackRemixers>
-    <trackAudioFile>
-      <audioFilename>NSR188_1.wav</audioFilename>
-    </trackAudioFile>
-    <countriesAvailable>
-      <country>WW</country>
-    </countriesAvailable>
-    <trackGenre>Progressive House</trackGenre>
-    <trackCopyright>No Smoking Recordings</trackCopyright>
-    <songwriters>
-      <songwriter>
-        <name>Murat Benek</name>
-        <type>author</type>
-      </songwriter>
-      <songwriter>
-        <name>Murat Benek</name>
-        <type>composer</type>
-      </songwriter>
-    </songwriters>
+      <albumOnly>0</albumOnly>
+      <trackNumber>1</trackNumber>
+      <ISRC>QZKWA2037244</ISRC>
+      <trackPublisher>No Smoking Recordings</trackPublisher>
+      <trackTitle>The Meaning</trackTitle>
+      <trackMixVersion>Muratt Mat Remix</trackMixVersion>
+      <originalReleaseDate>2022-07-15</originalReleaseDate>
+      <beatportExclusive>
+        <exclusivePeriod>0</exclusivePeriod>
+      </beatportExclusive>
+      <trackArtists>
+        <artistName>DJ Tarkan</artistName>
+      </trackArtists>
+      <trackRemixers>
+        <remixerName>Muratt Mat</remixerName>
+      </trackRemixers>
+      <trackAudioFile>
+        <audioFilename>NSR188_1.wav</audioFilename>
+      </trackAudioFile>
+      <countriesAvailable>
+        <country>WW</country>
+      </countriesAvailable>
+      <trackGenre>Progressive House</trackGenre>
+      <trackCopyright>No Smoking Recordings</trackCopyright>
+      <songwriters>
+        <songwriter>
+          <name>Murat Benek</name>
+          <type>author</type>
+        </songwriter>
+        <songwriter>
+          <name>Murat Benek</name>
+          <type>composer</type>
+        </songwriter>
+      </songwriters>
     </track>
   </tracks>
 </release>

@@ -2,6 +2,10 @@ import type { Artists } from "./artists.js";
 import type { Genres } from "./genres.js";
 import type { Country } from "./country.js";
 
+interface ReleaseModule {
+    release: Release;
+}
+
 interface Release {
 
     // Universal Product Code / European Article Number.
@@ -152,7 +156,8 @@ type SalesType = "release" | "album" | "mix";
 
 type ExclusivePeriod = 0 | 2 | 4 | 8 | "lifetime";
 
-export {
+export type {
+    ReleaseModule,
     Release,
     SalesType
 };

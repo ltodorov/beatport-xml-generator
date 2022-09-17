@@ -251,6 +251,6 @@ type Country = "WW"
     | "ZM"
     | "ZW";
 
-export {
+export type {
     Country
 };
