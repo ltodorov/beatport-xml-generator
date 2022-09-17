@@ -1,52 +1,54 @@
-import * as path from "node:path";
-import * as fs from "node:fs";
+import { resolve } from "node:path";
+import { argv, exit } from "node:process";
+import { access, mkdir } from "node:fs/promises";
 import { parseXml } from "libxmljs2";
-import { register } from "./helpers/register.js";
+import type { ReleaseModule } from "./models/release.js";
+import { getTemplate } from "./helpers/get-template.js";
+import { getSchema } from "./helpers/get-schema.js";
 import { logError } from "./helpers/log-error.js";
-import { readTemplate } from "./helpers/read-template.js";
-import { readSchema } from "./helpers/read-schema.js";
-import { writeFile } from "./helpers/write-file.js";
+import { setFile } from "./helpers/set-file.js";
 
-// Change the release data to generate a XML
-import { release } from "./data/releases/nsr188.js";
+const inputDataName = argv[2];
 
-const srcDir = path.resolve("src");
-const catalogDir = path.resolve("catalogue");
+if (!inputDataName) {
+    logError("Please provide a valid release number!");
+    exit(1);
+}
 
-const schemaFile = path.resolve(srcDir, "schema.xsd");
-const templateFile = path.resolve(srcDir, "template.hbs");
-const outputFile = path.resolve(catalogDir, `${release.catalogNumber}.xml`);
+import(
+    `./data/releases/${inputDataName}.js`
+).then(({ release }: ReleaseModule) => {
+    const srcDir = resolve("src");
+    const schemaFile = resolve(srcDir, "schema.xsd");
+    const templateFile = resolve(srcDir, "template.hbs");
+    const getTemplatePromise = getTemplate(templateFile, release);
+    const getSchemaPromise = getSchema(schemaFile,);
 
-register();
+    Promise.all([getTemplatePromise, getSchemaPromise])
+        .then(([xmlString, xsdString]) => {
+            if (!xmlString || !xsdString) {
+                return;
+            }
 
-const readTemplatePromise = readTemplate(templateFile, release).catch(logError);
-const readSchemaPromise = readSchema(schemaFile).catch(logError);
+            const xmlDoc = parseXml(xmlString);
+            const xsdDoc = parseXml(xsdString);
 
-Promise.all([readTemplatePromise, readSchemaPromise])
-    .then(([xmlString, xsdString]) => {
-        if (!xmlString || !xsdString) {
-            return;
-        }
-
-        const xmlDoc = parseXml(xmlString);
-        const xsdDoc = parseXml(xsdString);
-
-        if (xmlDoc.validate(xsdDoc)) {
-            fs.access(catalogDir, err => {
-                if (err) {
-                    fs.mkdir(catalogDir, err => {
-                        if (err) {
-                            logError(err.message);
-                            return;
-                        }
-                        writeFile(outputFile, xmlString);
-                    });
-                } else {
-                    writeFile(outputFile, xmlString);
-                }
-            });
-        } else {
-            logError("XML validation has been failed!");
-        }
-    })
-    .catch(logError);
+            if (xmlDoc.validate(xsdDoc)) {
+                const catalogDir = resolve("catalogue");
+                const outputFile = resolve(
+                    catalogDir,
+                    `${release.catalogNumber}.xml`
+                );
+                access(catalogDir).then(() => {
+                    setFile(outputFile, xmlString);
+                }).catch(() => {
+                    mkdir(catalogDir).then(() => {
+                        setFile(outputFile, xmlString);
+                    }).catch(logError);
+                });
+            } else {
+                logError("XML validation has been failed!");
+            }
+        })
+        .catch(logError);
+}).catch(logError);

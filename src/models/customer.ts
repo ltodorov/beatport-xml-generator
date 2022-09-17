@@ -6,6 +6,6 @@ interface Customer {
     labelName: string;
 }
 
-export {
+export type {
     Customer
 };

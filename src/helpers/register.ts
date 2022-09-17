@@ -9,7 +9,7 @@ function register() {
 
     Handlebars.registerHelper(
         "optionalValue",
-        (defaultValue: string, value?: string) => value || defaultValue
+        (defaultValue: string, value?: string) => value ?? defaultValue
     );
 
     Handlebars.registerHelper(
