@@ -23,7 +23,7 @@ const release: Release = {
             type: "composer"
         }]
     }]
-}
+};
 
 export {
     release

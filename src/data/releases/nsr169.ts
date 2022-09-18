@@ -19,7 +19,7 @@ const release: Release = {
             type: "author"
         }]
     }]
-}
+};
 
 export {
     release

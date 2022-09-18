@@ -28,7 +28,7 @@ const release: Release = {
             type: "lyricist"
         }]
     }]
-}
+};
 
 export {
     release
