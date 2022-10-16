@@ -565,11 +565,11 @@
 												<xs:enumeration value="DJ Tools | Battle Tools" />
 												<xs:enumeration value="DJ Tools | Acapellas" />
 												<xs:enumeration value="DJ Tools | Loops" />
-												<xs:enumeration value="Drum &amp; Bass | Liquid" />
-												<xs:enumeration value="Drum &amp; Bass | Jump Up" />
-												<xs:enumeration value="Drum &amp; Bass | Deep" />
-												<xs:enumeration value="Drum &amp; Bass | Jungle" />
-												<xs:enumeration value="Drum &amp; Bass | Halftime" />
+												<xs:enumeration value="Drum &amp Bass | Liquid" />
+												<xs:enumeration value="Drum &amp Bass | Jump Up" />
+												<xs:enumeration value="Drum &amp Bass | Deep" />
+												<xs:enumeration value="Drum &amp Bass | Jungle" />
+												<xs:enumeration value="Drum &amp Bass | Halftime" />
 												<xs:enumeration value="Dubstep | Melodic Dubstep" />
 												<xs:enumeration value="Dubstep | Bass" />
 												<xs:enumeration value="Electro (Classic / Detroit / Modern)" />
@@ -593,7 +593,7 @@
 												<xs:enumeration value="Mainstage | Future House" />
 												<xs:enumeration value="Mainstage | Electro House" />
 												<xs:enumeration value="Mainstage | Big Room" />
-												<xs:enumeration value="Melodic House &amp; Techno" />
+												<xs:enumeration value="Melodic House &amp Techno" />
 												<xs:enumeration value="Minimal / Deep Tech | Bounce" />
 												<xs:enumeration value="Minimal / Deep Tech | Deep Tech" />
 												<xs:enumeration value="Nu Disco / Disco | Italo" />
