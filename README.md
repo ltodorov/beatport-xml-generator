@@ -1,4 +1,7 @@
 # beatport-xml-generator
+
+*This project is deprecated in favor of a new [platform](https://beatport.ampsuite.com/) for content submissions to Beatport.com.*
+
 XML generator for content submissions to Beatport.com
 
 [![Node.js CI](https://github.com/ltodorov/beatport-xml-generator/actions/workflows/node.js.yml/badge.svg)](https://github.com/ltodorov/beatport-xml-generator/actions/workflows/node.js.yml)
