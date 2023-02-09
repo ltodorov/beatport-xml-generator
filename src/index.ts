@@ -11,7 +11,7 @@ import { logError } from "./helpers/log-error.js";
 const inputDataName = argv[2];
 
 if (!inputDataName) {
-    logError("Missing release number! Ex. `npm run build nsr190`");
+    logError(new Error("Missing release number! Ex. `npm run build nsr190`"));
     exit(1);
 }
 
