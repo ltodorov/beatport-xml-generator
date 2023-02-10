@@ -5,9 +5,11 @@
   "private": "true",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "pnpm": ">=7"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "rimraf dist && tsc && node dist/index.js",
     "lint": "eslint --ext .ts src",
     "test": "echo \"Error: no test specified\" && exit 1"
