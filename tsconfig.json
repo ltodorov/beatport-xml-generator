@@ -1,6 +1,7 @@
 {
-  "extends": "@tsconfig/node18-strictest-esm/tsconfig.json",
+  "extends": "@tsconfig/node-lts/tsconfig.json",
   "compilerOptions": {
+    "module": "ES2022",
     "outDir": "dist"
   },
   "file": [
