@@ -8,7 +8,7 @@ XML generator for content submissions to Beatport.com
 
 ## Steps to generate new XML
 1. Create a new release in `src/data/releases`.
-2. Run `npm run build {{releaseFileName}}`, where `{{releaseFileName}}` is the file name of the new release, ex. nsr200.
+2. Run `pnpm build {{releaseFileName}}`, where `{{releaseFileName}}` is the file name of the new release, ex. nsr200.
 3. Release `{{releaseFileName}}` will be generated in the `catalogue` folder.
 
 ## Update or delete a release via XML delivery
