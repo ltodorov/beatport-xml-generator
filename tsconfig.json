@@ -1,7 +1,10 @@
 {
-  "extends": "@tsconfig/node-lts/tsconfig.json",
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node-lts/tsconfig.json",
+    "@tsconfig/esm/tsconfig.json"
+  ],
   "compilerOptions": {
-    "module": "ES2022",
     "outDir": "dist"
   },
   "file": [

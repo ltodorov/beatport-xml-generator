@@ -1,7 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@tsconfig/esm': ^1.0.2
   '@tsconfig/node-lts': ^18.12.1
+  '@tsconfig/strictest': ^2.0.0
   '@types/node': ^18.15.10
   '@typescript-eslint/eslint-plugin': ^5.56.0
   '@typescript-eslint/parser': ^5.56.0
@@ -13,7 +15,9 @@ specifiers:
   typescript: ^5.0.2
 
 devDependencies:
+  '@tsconfig/esm': 1.0.2
   '@tsconfig/node-lts': 18.12.1
+  '@tsconfig/strictest': 2.0.0
   '@types/node': 18.15.10
   '@typescript-eslint/eslint-plugin': 5.56.0_2hcjazgfnbtq42tcc73br2vup4
   '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
@@ -122,8 +126,16 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@tsconfig/esm/1.0.2:
+    resolution: {integrity: sha512-awiISx+G4L+7k97nKnfA5QF6rukawiuycMPfASFHG/0fqjrUlYBuNISy3Yjl1SHIpVi57lYf7dc6L/FoQQCKcA==}
+    dev: true
+
   /@tsconfig/node-lts/18.12.1:
     resolution: {integrity: sha512-UkIaMWDwJ+qJX/os8lzYh7m47qQJY7sIp1WZiEStASrpzczp27+jA0fJES+IjnS2OlDDLeBghNrVkKw8iYIRdA==}
+    dev: true
+
+  /@tsconfig/strictest/2.0.0:
+    resolution: {integrity: sha512-E0dpiZNdwO20c8d3seh7OmjAvDpwoRkTcU6M8cvggzB45Bd45tyTU2XJeA5Wfq+8NzVGhunvqOJ30AjSkywMXA==}
     dev: true
 
   /@types/json-schema/7.0.11:
